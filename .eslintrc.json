@@ -1,0 +1,5 @@
+
+//To remove error : Cannot find module 'next/babel'
+{
+  "extends": ["next/babel"]
+}

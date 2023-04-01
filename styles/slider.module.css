@@ -1,0 +1,22 @@
+.imgWrapper {
+    min-height: 100vh;
+    width: 100vw;
+}
+
+@media (max-width: 900px) {
+    .imgWrapper {
+        min-height: 80vh;
+    }
+}
+
+@media (max-width: 500px) {
+    .imgWrapper {
+        min-height: 30vh;
+    }
+}
+
+/* @media screen and (max-width: 900px) {
+    .imgWrapper {
+        min-height: 80vh;
+    }
+} */
