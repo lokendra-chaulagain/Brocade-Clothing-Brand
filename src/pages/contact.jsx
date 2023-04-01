@@ -3,7 +3,7 @@ import ContactForm from "../components/ContactForm";
 
 export default function contact() {
   return (
-    <div  className='paddingTop'>
+    <div className="paddingTop">
       <ContactForm />
     </div>
   );
