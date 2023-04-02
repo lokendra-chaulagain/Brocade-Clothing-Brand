@@ -1,12 +1,10 @@
 import React from "react";
 import Login from "../components/account/Login";
 
-const login = () => {
+export default function login() {
   return (
     <div className="paddingTop">
       <Login />
     </div>
   );
-};
-
-export default login;
+}

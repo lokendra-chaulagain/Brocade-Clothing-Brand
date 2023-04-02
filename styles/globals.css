@@ -297,7 +297,6 @@ a:hover {
   background-color: black;
   color: white;
   padding: 10px 18px;
-  transition: 0.25s ease-in-out;
   border: none;
   text-transform: uppercase;
 }
@@ -305,16 +304,16 @@ a:hover {
 .global_black_button:hover {
   background-color: rgb(31, 31, 31);
   transform: translateY(-1px);
+  transition: all 0.5s ease-in-out;
 }
 
-.mySecondaryBtn {
+.outline_button {
   border: 1px solid black;
   padding: 5px 15px;
-  transition: 0.25s;
   background-color: white;
 }
 
-.mySecondaryBtn:hover {
+.outline_button:hover {
   background-color: black;
   color: white;
 }
@@ -495,11 +494,10 @@ input::placeholder {
   text-transform: capitalize !important;
 }
 
-
-.cp{
+.cp {
   cursor: pointer;
 }
 
-.text_black{
+.text_black {
   color: black !important;
 }

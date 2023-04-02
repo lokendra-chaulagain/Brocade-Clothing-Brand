@@ -206,7 +206,7 @@ const SingleProduct = () => {
             );
           </div>
           <div className="btn-group d-flex gap-3 my-4">
-            return <button className="mySecondaryBtn">Item NAme</button>;
+            return <button className="outline_button">Item NAme</button>;
           </div>
           <div className="button mb-4 mt-2">
             <button

@@ -289,7 +289,7 @@ const AccountNavTab = () => {
                     <button
                       data-bs-dismiss="modal"
                       aria-label="Close"
-                      className="mySecondaryBtn flex-fill">
+                      className="outline_button flex-fill">
                       Close
                     </button>
                   </div>
