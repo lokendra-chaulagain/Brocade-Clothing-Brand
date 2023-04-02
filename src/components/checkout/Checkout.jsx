@@ -184,11 +184,11 @@ const Checkout = () => {
                 onChange={(e) => setData({ ...data, notes: e.target.value })}
                 value={data.notes}
               />
-              {!token && <button className="myBtn w-100">Verify Phone number</button>}
+              {!token && <button className="global_black_button w-100">Verify Phone number</button>}
 
               <button
                 type="button"
-                className="myBtn w-100 d-none open_modal"
+                className="global_black_button w-100 d-none open_modal"
                 data-bs-toggle="modal"
                 data-bs-target="#opt_modal"></button>
             </div>
@@ -219,7 +219,7 @@ const Checkout = () => {
                     <input
                       type="button"
                       value="Apply"
-                      className="d-block btn-block myBtn px-5"
+                      className="d-block btn-block global_black_button px-5"
                       onClick={applyCoupon}
                       disabled={coupon.isapplied}
                     />
@@ -260,7 +260,7 @@ const Checkout = () => {
                   {" "}
                   <div className="col-md-6">
                     <button
-                      className="myBtn w-100"
+                      className="global_black_button w-100"
                       onClick={(e) => setisVerified(false)}>
                       ⬅ Edit Shipping Address
                     </button>
@@ -268,7 +268,7 @@ const Checkout = () => {
                   <div className="col-md-6 ">
                     <button
                       type="submit"
-                      className="myBtn w-100">
+                      className="global_black_button w-100">
                       Checkout ➡
                     </button>
                   </div>
@@ -279,7 +279,7 @@ const Checkout = () => {
                 <div className="col-md-12 ">
                   <button
                     type="submit"
-                    className="myBtn w-100">
+                    className="global_black_button w-100">
                     Checkout ➡
                   </button>
                 </div>
@@ -322,7 +322,7 @@ const Checkout = () => {
                 <div className="d-flex gap-1">
                   <button
                     type="submit"
-                    className="myBtn flex-fill">
+                    className="global_black_button flex-fill">
                     verify
                   </button>
                 </div>

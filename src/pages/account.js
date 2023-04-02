@@ -152,7 +152,7 @@ export default function account() {
                 )}
 
                 <div className="d-flex gap-1">
-                  <button className="myBtn flex-fill">Update</button>
+                  <button className="global_black_button flex-fill">Update</button>
                   <button
                     data-bs-dismiss="modal"
                     aria-label="Close"

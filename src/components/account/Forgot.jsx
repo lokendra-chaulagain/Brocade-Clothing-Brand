@@ -37,7 +37,7 @@ const Forgot = () => {
               />
               {errors.data && <small className="text-danger">{errors.data.message}</small>}
             </div>
-            <button className="myBtn w-100">Send Verification Code</button>
+            <button className="global_black_button w-100">Send Verification Code</button>
             <button
               type="button"
               className="ghostBtn align-right w-100"

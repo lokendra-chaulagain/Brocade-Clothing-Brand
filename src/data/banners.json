@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680400219/Brocade/Banner/banner-1_wj4hvl.webp"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "email": "janesmith@example.com",
+    "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680400219/Brocade/Banner/banner-2_vaeugg.webp"
+  },
+  {
+    "id": 3,
+    "name": "Bob Johnson",
+    "email": "bobjohnson@example.com",
+    "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680400219/Brocade/Banner/banner-3_icz62r.webp"
+  },
+  {
+    "id": 4,
+    "name": "Bob Johnson",
+    "email": "bobjohnson@example.com",
+    "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680400219/Brocade/Banner/banner-4_bytscg.webp"
+  },
+  {
+    "id": 5,
+    "name": "Bob Johnson",
+    "email": "bobjohnson@example.com",
+    "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680400219/Brocade/Banner/banner-5_ytkrfe.webp"
+  },
+  {
+    "id": 6,
+    "name": "Bob Johnson",
+    "email": "bobjohnson@example.com",
+    "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680400219/Brocade/Banner/banner-6_yiagas.webp"
+  }
+]

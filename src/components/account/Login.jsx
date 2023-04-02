@@ -105,7 +105,7 @@ const Login = () => {
             </div>
 
             <button
-              className="myBtn w-100"
+              className="global_black_button w-100"
               type="submit">
               Login
             </button>

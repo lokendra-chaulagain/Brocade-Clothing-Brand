@@ -1,9 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
-import { set, useForm } from "react-hook-form";
-import Api from "../../services/Api";
-import Otp from "../../services/sendOtp";
-import { useRouter } from "next/router";
+import { useForm } from "react-hook-form";
 
 const Signup = () => {
   const {
@@ -13,7 +10,7 @@ const Signup = () => {
     watch,
   } = useForm();
 
-  let registerHandler = async () => {};
+  const registerHandler = async () => {};
 
   return (
     <div className="container">
@@ -159,7 +156,7 @@ const Signup = () => {
             <br />
           </div>
           <div className="buttons d-flex flex-column">
-            <button className="myBtn w-100">Register</button>
+            <button className="global_black_button w-100">Register</button>
             <Link href="/login">
               <button className="ghostBtn">Back to Login</button>
             </Link>

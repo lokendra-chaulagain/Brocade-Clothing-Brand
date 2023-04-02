@@ -8,7 +8,7 @@ const Registersuggest = () => {
       <hr />
       <p className="fs-14">By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
       <Link href='/register'>
-          <button className="myBtn w-100">Register</button>
+          <button className="global_black_button w-100">Register</button>
       </Link>
     </div>
   )

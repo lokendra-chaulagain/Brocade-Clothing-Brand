@@ -1,44 +1,49 @@
-import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import "swiper/css/navigation"
-import Image from 'next/image'
-import style from '../../styles/slider.module.css'
-import { Navigation } from 'swiper'
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import Image from "next/image";
+import style from "../../styles/slider.module.css";
+import { Navigation } from "swiper";
+import banners from "../data/banners.json";
 
-
-
-const Slider = (props) => {
-    // const img = 'https://images.unsplash.com/photo-1494783367193-149034c05e8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
+const Slider = () => {
   return (
-    <div className='mb-3'>
+    <div className="mb-3 container-fluid">
       <Swiper
-        // spaceBetween={50}
         loop={true}
         navigation={true}
         slidesPerView={1}
-        modules={[Navigation]}
-        >
-            {
-                props.banners.map((image, index) => (
-                    <SwiperSlide key={Math.random()}>
-                        <div  >
-                            <div className={style.imgWrapper}>
-                             { image.type==0 &&  <Image className={style.carImg} src={`${process.env.NEXT_PUBLIC_API_URL}/${image.image1}`} alt={image.title} layout='fill' objectFit='cover' 
-                             
-                             loading={index==0?'eager':'lazy'}
-                             priority={index==0?true:false}
-                             
-                             />}
+        modules={[Navigation]}>
+        {banners.map((banner, id) => (
+          <SwiperSlide key={id}>
+            <div className="row d-flex align-items-center">
+              <div className="col d-flex flex-column align-items-center">
+                <p className="h1 fw-bold">BROCADE 2.0</p>
+                <p className="h4 text-center">We believe in change, we believe in growth, we believe in us, we believe in you, we believe in youth.</p>
+                <button
+                  type="submit"
+                  className="global_black_button  px-4 mt-2">
+                  PRE-ORDER
+                </button>
+              </div>
 
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                ))
-            }
-        </Swiper>
+              <div className={`${style.banner_image} col`}>
+                <Image
+                  className={style.carImg}
+                  src={banner.image}
+                  alt="img"
+                  objectFit="scale-down"
+                  height={1000}
+                  width={1000}
+                />
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
-  )
-}
+  );
+};
 
-export default Slider
+export default Slider;

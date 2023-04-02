@@ -40,7 +40,7 @@ const Exclusivenew = () => {
         <motion.div className='col mt-0 mt-md-5 pt-0 pt-md-5' initial='offscreen' whileInView='onscreen' viewport={{ once: false, amount: 0.5 }}>
             <motion.h1 variants={itemVariants} className={style.h1}>Yellow Jump Suit</motion.h1>
             <motion.p variants={itemVariants}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ab mollitia aut hic quo placeat eius temporibus qui! In nam est repellendus quidem consectetur? Provident minus ipsum eligendi tempora. Nam!</motion.p>
-            <motion.button variants={itemVariants} className="myBtn px-5 mt-2">Reedem Now</motion.button>
+            <motion.button variants={itemVariants} className="global_black_button px-5 mt-2">Reedem Now</motion.button>
         </motion.div>
       </div>
       
@@ -54,7 +54,7 @@ const Exclusivenew = () => {
         <motion.div className='col mt-0 mt-md-5 pt-0 pt-md-5 order-md-1' initial='offscreen' whileInView='onscreen' viewport={{ once: false, amount: 0.5 }}>
             <motion.h1 variants={itemVariants} className={style.h1}>Yellow Jump Suit</motion.h1>
             <motion.p variants={itemVariants}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ab mollitia aut hic quo placeat eius temporibus qui! In nam est repellendus quidem consectetur? Provident minus ipsum eligendi tempora. Nam!</motion.p>
-            <motion.button variants={itemVariants} className="myBtn px-5 mt-2">Reedem Now</motion.button>
+            <motion.button variants={itemVariants} className="global_black_button px-5 mt-2">Reedem Now</motion.button>
         </motion.div>
       </div>
       
@@ -68,7 +68,7 @@ const Exclusivenew = () => {
         <motion.div className='col mt-0 mt-md-5 pt-0 pt-md-5' initial='offscreen' whileInView='onscreen' viewport={{ once: false, amount: 0.5 }}>
             <motion.h1 variants={itemVariants} className={style.h1}>Yellow Jump Suit</motion.h1>
             <motion.p variants={itemVariants}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ab mollitia aut hic quo placeat eius temporibus qui! In nam est repellendus quidem consectetur? Provident minus ipsum eligendi tempora. Nam!</motion.p>
-            <motion.button variants={itemVariants} className="myBtn px-5 mt-2">Reedem Now</motion.button>
+            <motion.button variants={itemVariants} className="global_black_button px-5 mt-2">Reedem Now</motion.button>
         </motion.div>
       </div>
     </div>

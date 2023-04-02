@@ -1,8 +1,8 @@
 import React from "react";
 
-const Policy = () => {
+export default function PrivacyPolicy() {
   return (
-    <div>
+    <div className="paddingTop">
       <div className="container">
         <div className="h1 my-3 fw-bold">Our Policy</div>
         <div className="row">
@@ -11,6 +11,4 @@ const Policy = () => {
       </div>
     </div>
   );
-};
-
-export default Policy;
+}

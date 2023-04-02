@@ -268,7 +268,7 @@ const SingleProduct = (props) => {
 
           <div className="button mb-4 mt-2">
             <button
-              className="myBtn w-100"
+              className="global_black_button w-100"
               data-bs-toggle="offcanvas"
               data-bs-target="#cartoffcanvasNavbar"
               aria-controls="offcanvasNavbar"

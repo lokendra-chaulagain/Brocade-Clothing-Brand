@@ -1,9 +1,8 @@
-.imgWrapper {
-    min-height: 100vh;
-    width: 100vw;
+.banner_image {
+    /* min-height: 90vh; */
 }
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
     .imgWrapper {
         min-height: 80vh;
     }
@@ -13,7 +12,7 @@
     .imgWrapper {
         min-height: 30vh;
     }
-}
+} */
 
 /* @media screen and (max-width: 900px) {
     .imgWrapper {

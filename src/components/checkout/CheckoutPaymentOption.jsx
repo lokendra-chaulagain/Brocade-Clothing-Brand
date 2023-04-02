@@ -11,21 +11,21 @@ const CheckoutPaymentOption = () => {
         <div className="button-group p-3 d-flex gap-3 w-100">
           <button
             type="button"
-            // className={data.payment_mode == "esewa" ? `myBtn w-100 ` : `mySecondaryBtn w-100`}
+            // className={data.payment_mode == "esewa" ? `global_black_button w-100 ` : `mySecondaryBtn w-100`}
             value="esewa">
             E-Sewa
           </button>
 
           <button
             type="button"
-            // className={data.payment_mode == "cod" ? `myBtn w-100` : `mySecondaryBtn w-100`}
+            // className={data.payment_mode == "cod" ? `global_black_button w-100` : `mySecondaryBtn w-100`}
             value="cod">
             Cash
           </button>
 
           <button
             type="button"
-            // className={data.payment_mode == "card" ? `myBtn w-100` : `mySecondaryBtn w-100`}
+            // className={data.payment_mode == "card" ? `global_black_button w-100` : `mySecondaryBtn w-100`}
             value="card"
             //  onClick={(e)=>setData({...data,payment_mode:e.target.value})}
             onClick={(e) => {

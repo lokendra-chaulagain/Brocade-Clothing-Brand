@@ -14,7 +14,7 @@ const Explusiveproductview = () => {
                 <div className="mt-5">
                     <h1>Yellow Jump Suit</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique dolorem odio autem sint tenetur, nisi numquam animi perferendis! Nam non officiis reiciendis sunt optio cupiditate ut reprehenderit iure tempore natus?</p>
-                    <button className="myBtn">Reedem Now</button>
+                    <button className="global_black_button">Reedem Now</button>
                 </div>
             </div>
         </div>

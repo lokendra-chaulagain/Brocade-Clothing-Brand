@@ -1,6 +1,6 @@
 import React from "react";
 
-const TermCondition = () => {
+export default function TermCondition() {
   return (
     <div>
       <div className="container">
@@ -11,6 +11,4 @@ const TermCondition = () => {
       </div>
     </div>
   );
-};
-
-export default TermCondition;
+}

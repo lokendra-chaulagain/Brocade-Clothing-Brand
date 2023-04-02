@@ -88,7 +88,7 @@ const ContactForm = () => {
             <div className="row  px-2 mt-3">
               <button
                 type="submit"
-                className="myBtn">
+                className="global_black_button">
                 SUBMIT
               </button>
             </div>

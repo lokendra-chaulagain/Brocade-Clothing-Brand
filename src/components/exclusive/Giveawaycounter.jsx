@@ -16,7 +16,7 @@ const Giveawaycounter = () => {
         <div className={`${Style.giveAway}`}>
           <h1>Giveaway</h1>
           <h3>20 hr. 12 min. 19 sec.</h3>
-          <button className="myBtn mt-3 px-4">Enter the giveAway</button>
+          <button className="global_black_button mt-3 px-4">Enter the giveAway</button>
         </div>
       </section>
     </>

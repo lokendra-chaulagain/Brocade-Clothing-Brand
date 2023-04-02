@@ -197,7 +197,7 @@ const NavBar = () => {
                 </li>
               </ul>
               <Link href="/exclusive">
-                <button className="myBtn w-100 mt-3">Exclusive</button>
+                <button className="global_black_button w-100 mt-3">Exclusive</button>
               </Link>
             </div>
           </div>

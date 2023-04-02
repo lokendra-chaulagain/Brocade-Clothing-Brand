@@ -1,6 +1,6 @@
 import React from "react";
 
-const Pagenotfound = () => {
+export default function NotFound() {
   return (
     <div
       className="d-flex flex-column align-items-center justify-content-center paddingTop"
@@ -8,6 +8,4 @@ const Pagenotfound = () => {
       <h1 className="mt-4">404 Page not found</h1>
     </div>
   );
-};
-
-export default Pagenotfound;
+}

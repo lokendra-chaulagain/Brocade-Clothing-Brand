@@ -1,4 +1,4 @@
-import React, {  } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 
 const Otp = () => {
@@ -37,12 +37,15 @@ const Otp = () => {
                 })}
                 className="form-control rounded-0 text-center"
                 placeholder="OTP"
-                onChange={(e) => setverification_code(e.target.value)}
                 style={{ letterSpacing: "10px" }}
               />
-              {errors.verification_code && <small className="text-danger">{errors.verification_code.message}</small>}
+              {errors.verification_code && <small className="text-danger">Required Field</small>}
             </div>
-            <button className="myBtn w-100 mt-2">Verify</button>
+            <button
+              type="submit"
+              className="global_black_button w-100 mt-2">
+              Verify
+            </button>
             <button
               type="button"
               className="ghostBtn align-right w-100"

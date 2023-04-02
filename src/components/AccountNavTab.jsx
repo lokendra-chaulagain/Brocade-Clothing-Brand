@@ -127,7 +127,7 @@ const AccountNavTab = () => {
               />
             </div>
 
-            <button className="myBtn w-100 ">Update</button>
+            <button className="global_black_button w-100 ">Update</button>
           </form>
         </div>
 
@@ -285,7 +285,7 @@ const AccountNavTab = () => {
                     </div>
                   </form>
                   <div className="d-flex gap-1">
-                    <button className="myBtn flex-fill">Update</button>
+                    <button className="global_black_button flex-fill">Update</button>
                     <button
                       data-bs-dismiss="modal"
                       aria-label="Close"

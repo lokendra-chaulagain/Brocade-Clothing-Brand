@@ -81,7 +81,7 @@ const Footer = () => {
 
             <div className="d-grid gap-2">
               <button
-                className="myBtn"
+                className="global_black_button"
                 type="submit">
                 Send me cool Stuff{" "}
               </button>
@@ -192,7 +192,7 @@ const Footer = () => {
                   <div className="d-flex gap-1">
                     <button
                       type="submit"
-                      className="myBtn flex-fill">
+                      className="global_black_button flex-fill">
                       subscribe
                     </button>
                   </div>

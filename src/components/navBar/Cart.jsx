@@ -45,7 +45,7 @@ const Cart = () => {
         </div>
         <Link href='/checkout'>
           <div className="button">
-            <button className="myBtn mb-3 w-100" data-bs-dismiss="offcanvas" aria-label="Close">cHeCk OuT</button>
+            <button className="global_black_button mb-3 w-100" data-bs-dismiss="offcanvas" aria-label="Close">cHeCk OuT</button>
           </div>
           </Link>
       </div>
