@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/components/Navbar1.jsx", "src/components/Navbar1.jsx", "src/components/products/SingleProduct.jsx", "src/pages/store/[url].jsx"  ],
+, "src/components/Navbar1.jsx", "src/components/Navbar1.jsx", "src/components/products/SingleProduct.tsx", "src/pages/store/[url].jsx"  ],
   "exclude": [
     "node_modules"
   ]

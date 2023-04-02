@@ -3,10 +3,9 @@ import "../../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "../components/Footer";
 import NavBar from "../components/navBar/NavBar";
-import CartitemState from "../services/context/CartitemState";
 import { ToastContainer } from "react-toastify";
-
 import "react-toastify/dist/ReactToastify.css";
+import NewsLetter from "../components/NewsLetter";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -15,20 +14,14 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <CartitemState>
-        <div className="mainWrapper">
-          <div className="navWrapper">
-            <NavBar />
-          </div>
-          <div className="bodyWrapper">
-            <Component {...pageProps} />
-          </div>
-          <div className="footerWrapper">
-            {" "}
-            <Footer />
-          </div>
-        </div>
-      </CartitemState>
+      <NavBar />
+      <div className="bodyWrapper">
+        <Component {...pageProps} />
+      </div>
+      <NewsLetter />
+      <div className="footerWrapper">
+        <Footer />
+      </div>
       <ToastContainer theme="colored" />
     </>
   );

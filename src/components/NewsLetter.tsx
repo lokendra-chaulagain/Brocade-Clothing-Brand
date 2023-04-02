@@ -6,11 +6,13 @@ export default function NewsLetter() {
 
   };
   return (
-    <div className="container my-5">
-      <p className="h3 fw-bold text-center mb-3">Subscribe Our News Letter</p>
+    <div className="news_letter_wrapper">
+
+    <div className="container my-5 ">
+      <p className="h1 fw-bold text-center text-white mb-3">Subscribe Our News Letter</p>
       <div onClick={handleSubscribe}>
         <div className=""  >
-          <p className="col-form-label text-muted text-center mb-2">GET NOTIFIED ABOUT NEW PRODUCT ARRIVALS AND EARLY RELEASE INFO</p>
+          <p className="col-form-label  text-white text-center mb-2">GET NOTIFIED ABOUT NEW PRODUCT ARRIVALS AND EARLY RELEASE INFO</p>
           <input
             type="email"
             required
@@ -26,6 +28,7 @@ export default function NewsLetter() {
           subscribe
         </button>
       </div>
+    </div>
     </div>
   );
 }
