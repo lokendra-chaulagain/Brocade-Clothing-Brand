@@ -1,67 +1,30 @@
 import React from "react";
 import Image from "next/image";
-import API from "../../src/services/Api";
-import { useRouter } from "next/router";
-import {useState,useEffect} from 'react';
-import moment from 'moment/moment';
+import demo from "../assets/banner-3.webp"
 
-
-
-
-
-
-
-
-
-
-// let id="6323ed0d4137d65be0107f43"
 const SingleBlog = () => {
-  // console.log(props.blog)
-  const CallApi=new API();
-
-  let router=useRouter();
-
-
-
-   const [singleBlog,SetSingleBlog]=useState();
-
-  useEffect(()=>{
-  CallFun();
-  },[]);
-  
-  const CallFun=async()=>{
-    let mycalldata=await CallApi.EditData(`singleblog/${router.query.url}`)
-    mycalldata && SetSingleBlog(mycalldata);
-    // console.log(mycalldata);
-
-  }
-
-  console.log(singleBlog);
-
   return (
     <div className=" ">
       <div className="row">
-        <h1 className="h1 d-flex justify-content-center">{singleBlog && singleBlog.title}</h1>
-          
-        { singleBlog &&
+        <h1 className="h1 d-flex justify-content-center">Title</h1>
+
         <div className="image mb-2">
-                <Image className="cardImg w-100 img-fluid" src={`${process.env.NEXT_PUBLIC_API_URL}/${singleBlog.thumbnail}`}
-                  height='100%' layout="responsive" width='100%' />
-              </div>
-            }
+          <Image
+            className="cardImg w-100 img-fluid"
+            src={demo}
+            height="100%"
+            layout="responsive"
+            width="100%"
+          />
+        </div>
 
-        
-       {singleBlog &&<p className="d-flex justify-content-center">{moment(singleBlog.createdAt).format('DD-MM-YYYY')}</p>}
+        <p className="d-flex justify-content-center">2023-12-3</p>
 
-
-        {singleBlog &&
         <p className="pb-3">
-          {singleBlog.description}
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos soluta sit vero, necessitatibus ad nesciunt eveniet iste quam accusamus dicta similique culpa architecto ab dolorum minima, vel quasi vitae nemo, facilis dolorem consectetur iusto minus ea. Incidunt, nesciunt quis natus ipsum ullam qui. Hic ex soluta repudiandae, totam nobis at laudantium porro debitis commodi libero facere obcaecati rerum pariatur magnam numquam corrupti dolores aspernatur earum saepe ipsum dolorum
+          molestias! Voluptatum, vero dignissimos. Doloremque maxime tenetur quia quasi nisi molestias, placeat repellat iste animi commodi exercitationem minima optio impedit, corrupti explicabo quod ratione, sed nihil. Non laudantium perspiciatis corrupti assumenda sequi.
         </p>
-        }
       </div>
-
-    
     </div>
   );
 };

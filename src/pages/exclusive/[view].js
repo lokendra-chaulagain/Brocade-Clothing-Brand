@@ -1,8 +1,11 @@
+
+
+
+
 import React from 'react'
-// import Explusiveproductview from '../../components/exclusive/Explusiveproductview'
 
-const view = () => {
-      // <Explusiveproductview />
+export default function view() {
+  return (
+   <Explusiveproductview/>
+  )
 }
-
-export default view
