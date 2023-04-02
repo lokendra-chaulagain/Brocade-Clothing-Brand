@@ -1,5 +1,5 @@
 import React from "react";
-import ProductItem from "../../components/products/ProductItem";
+import ProductItem from "../ProductItem";
 
 const Suggested = () => {
   return (

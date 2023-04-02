@@ -3,7 +3,7 @@ import BlogCard from "../../components/BlogCard";
 
 const Blog = () => {
   return (
-    <div className='paddingTop'>
+    <div className="paddingTop">
       <BlogCard />
     </div>
   );

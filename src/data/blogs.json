@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "title": "John Doe",
+        "description": "johndoe@example.com",
+        "createdAt": "2 days ago",
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680420002/Brocade/Blogs/blog-1_kgmxoi.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Jane Smith",
+        "description": "janesmith@example.com",
+        "createdAt": "2 days ago",
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680420001/Brocade/Blogs/blog-2_deslem.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Bob Johnson",
+        "description": "bobjohnson@example.com",
+        "createdAt": "2 days ago",
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680420001/Brocade/Blogs/blog-3_ssaji5.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Bob Johnson",
+        "description": "bobjohnson@example.com",
+        "createdAt": "2 days ago",
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680420001/Brocade/Blogs/blog-4_iewa5p.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Bob Johnson",
+        "description": "bobjohnson@example.com",
+        "createdAt": "2 days ago",
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680420001/Brocade/Blogs/blog-5_cbkaqu.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Bob Johnson",
+        "description": "bobjohnson@example.com",
+        "createdAt": "2 days ago",
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680420001/Brocade/Blogs/blog-6_yyjxst.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Jane Smith",
+        "description": "janesmith@example.com",
+        "createdAt": "2 days ago",
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680420001/Brocade/Blogs/blog-7_rje51r.jpg"
+    }
+]

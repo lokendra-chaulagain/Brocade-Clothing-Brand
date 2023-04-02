@@ -151,13 +151,13 @@ const Footer = () => {
             </li>
 
             <li>
-              <Link href="/ourpolicy">
+              <Link href="/privacy-policy">
                 <a className="text-dark text-decoration-none">POLICY</a>
               </Link>
             </li>
 
             <li>
-              <Link href="/termcondition">
+              <Link href="/terms-conditions">
                 <a className="text-dark text-decoration-none">TERMS</a>
               </Link>
             </li>
@@ -201,7 +201,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        {/* ================== */}
       </div>
     </div>
   );

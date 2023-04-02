@@ -9,26 +9,19 @@ const ContactForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  let callApi = new Api();
 
-  const addHandler = async () => {};
+  const handleSend = async () => {};
 
   return (
     <>
-      <div className="px-5">
+      <div className="container my-5">
         <div className="row ">
-          <h6 className="h6 text-uppercase fw-bold">Our store</h6>
-          <hr />
-          <Store />
-        </div>
-
-        <div className="row mt-3">
           <form
             className="col-12 d-flex flex-column order-first order-md-last"
-            onSubmit={handleSubmit(addHandler)}>
+            onSubmit={handleSubmit(handleSend)}>
             <hr className="d-block d-md-none" />
             <hr className="d-block d-md-none" />
-            <h6 className="h5 text-center fw-bold">CONTACT US</h6>
+            <p className="h3 mb-2 text-center fw-bold">CONTACT US</p>
 
             <div className="row px-2">
               <input

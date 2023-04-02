@@ -13,6 +13,11 @@ body {
   font-family: "Outfit" !important;
 }
 
+p {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
 .select_color {
   transform: scale(1.1);
   transition: 0.3s;
@@ -488,4 +493,13 @@ input[type="checkbox"] {
 
 input::placeholder {
   text-transform: capitalize !important;
+}
+
+
+.cp{
+  cursor: pointer;
+}
+
+.text_black{
+  color: black !important;
 }

@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
           </div>
           <div className="footerWrapper">
             {" "}
-            <Footer  />
+            <Footer />
           </div>
         </div>
       </CartitemState>
