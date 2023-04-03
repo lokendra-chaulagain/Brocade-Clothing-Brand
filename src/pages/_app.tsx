@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: any) {
       <div className="bodyWrapper">
         <Component {...pageProps} />
       </div>
-      <NewsLetter />
+      {/* <NewsLetter /> */}
       <div className="footerWrapper">
         <Footer />
       </div>

@@ -1,26 +1,29 @@
 import React from "react";
 import Image from "next/image";
-import demo from "../assets/banner-3.webp"
+import blogs from "../data/blogs.json";
 
 const SingleBlog = () => {
+  const blog = blogs[1];
   return (
-    <div className=" ">
+    <div className="">
       <div className="row">
-        <h1 className="h1 d-flex justify-content-center">Title</h1>
+        <p className="h1 text-center">{blog.title}</p>
+        <small className="d-flex justify-content-end px-5 ">8 days ago</small>
 
-        <div className="image mb-2">
+        <div className="image my-3">
           <Image
             className="cardImg w-100 img-fluid"
-            src={demo}
-            height="100%"
+            src={blog.image}
+            height={400}
+            width={1000}
             layout="responsive"
-            width="100%"
+            objectFit="cover"
           />
         </div>
 
         <p className="d-flex justify-content-center">2023-12-3</p>
 
-        <p className="pb-3">
+        <p className="pb-3 px-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos soluta sit vero, necessitatibus ad nesciunt eveniet iste quam accusamus dicta similique culpa architecto ab dolorum minima, vel quasi vitae nemo, facilis dolorem consectetur iusto minus ea. Incidunt, nesciunt quis natus ipsum ullam qui. Hic ex soluta repudiandae, totam nobis at laudantium porro debitis commodi libero facere obcaecati rerum pariatur magnam numquam corrupti dolores aspernatur earum saepe ipsum dolorum
           molestias! Voluptatum, vero dignissimos. Doloremque maxime tenetur quia quasi nisi molestias, placeat repellat iste animi commodi exercitationem minima optio impedit, corrupti explicabo quod ratione, sed nihil. Non laudantium perspiciatis corrupti assumenda sequi.
         </p>

@@ -517,3 +517,24 @@ input::placeholder {
   -ms-user-select: none;
   user-select: none;
 }
+
+.h100vh {
+  height: 100vh !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: calc(0.5rem + 0.5vw) !important;
+  color: black !important;
+}
+
+
+
+.product_wrapper:hover .product_image {
+  scale: 1.05;
+  transition: all .5s ease-in-out;
+}
+
+.color_white{
+  color: whitesmoke;
+}

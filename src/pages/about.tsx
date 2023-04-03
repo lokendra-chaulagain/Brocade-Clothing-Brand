@@ -1,14 +1,12 @@
 import React from "react";
 
-export default function About() {
+export default function about() {
   return (
-    <div>
-      <div className="container">
-        <div className="h1 my-3 fw-bold">ABOUT US</div>
+      <div className="container paddingTop">
+        <div className="h1  fw-bold">ABOUT US</div>
         <div className="row">
           <div className="col">Lorem ipsum dolor sit amet.</div>
         </div>
       </div>
-    </div>
   );
 }

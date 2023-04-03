@@ -1,229 +1,117 @@
 import Image from "next/image";
-import React from "react";
-import demo from "../../assets/banner-1.webp";
+import React, { useState } from "react";
+import { MdAdd } from "react-icons/md";
+import { TbMinus } from "react-icons/tb";
+import { toast } from "react-toastify";
+import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
+import images from "../../data/greenJacketImages.json";
 
 const SingleProduct = () => {
+  const [totalPrice, setTotalPrice] = useState(3700);
+  const [quantity, setQuantity] = useState(1);
+
+  const increaseQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const decreaseQuantity = () => {
+    setQuantity(quantity - 1);
+  };
+
+  const addToCart = () => {
+    toast.success("Added To Cart");
+  };
+
   return (
-    <div className="container paddingTop">
-      <div className="product row row-cols-1 row-cols-md-2 gap-3 row-cols-lg-2 d-sm-flex justify-content-center">
-        <div className="productImage col col-md-5 col-lg-6 d-none d-sm-block">
-          <div className="mb-2">
-            <Image
-              src={demo}
-              height={600}
-              width={500}
-              layout="responsive"
-              objectFit="cover"
-              loading="eager"
-              priority={true}
-              quality={20}
-            />
-          </div>
-
-          <div className="mb-2">
-            <Image
-              src={demo}
-              height={600}
-              width={500}
-              layout="responsive"
-              objectFit="cover"
-              quality="10"
-              loading="eager"
-              decoding="async"
-            />
-          </div>
-
-          <div className="mb-2">
-            <Image
-              src={demo}
-              height={600}
-              width={500}
-              layout="responsive"
-              objectFit="cover"
-            />
-          </div>
-
-          <div className="mb-2">
-            <Image
-              src={demo}
-              height={600}
-              width={500}
-              layout="responsive"
-              objectFit="cover"
-            />
-          </div>
-
-          <div className="mb-2">
-            <Image
-              src={demo}
-              height={600}
-              width={500}
-              layout="responsive"
-              objectFit="cover"
-            />
-          </div>
+    <>
+      <div className="row">
+        <div className="col-6">
+          <Swiper
+            loop={true}
+            navigation={true}
+            slidesPerView={1}
+            modules={[Navigation]}>
+            {images.map((product, id) => (
+              <SwiperSlide
+                className="no_selection"
+                key={id}>
+                <Image
+                  className="no_selection"
+                  src={product.image}
+                  alt="img"
+                  objectFit="scale-down"
+                  height={1000}
+                  width={1000}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
 
-        <div
-          id="carouselExampleIndicators"
-          className="carousel slide d-block d-sm-none"
-          data-bs-ride="true">
-          <div className="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="0"
-              className="active"
-              aria-current="true"
-              aria-label="Slide 1"></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="3"
-              aria-label="Slide 3"></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="4"
-              aria-label="Slide 3"></button>
+        <div className="col-6">
+          <p className="h1">Bomber Jacket</p>
+          <p> Stylish and versatile jacket that is typically short in length, with a front zip closure</p>
+
+          <div className="d-flex align-items-center gap-3">
+            <p className="h5">Colors : </p>
+            <div className="color d-flex gap-3 my-3">
+              <p className="p-2 cp bg-secondary"></p>
+              <p className="p-2 cp bg-primary"></p>
+              <p className="p-2 cp bg-danger"></p>
+              <p className="p-2 cp bg-warning"></p>
+              <p className="p-2 cp bg-black"></p>
+            </div>
           </div>
-          <div className="carousel-inner">
-            <div className="carousel-item active first_carousel">
-              <Image
-                src={demo}
-                height={600}
-                width={500}
-                layout="responsive"
-                objectFit="cover"
-                quality="10"
-                loading="eager"
-                decoding="async"
-              />
-            </div>
 
-            <div className="carousel-item ">
-              <Image
-                src={demo}
-                height={600}
-                width={500}
-                layout="responsive"
-                objectFit="cover"
-                quality="10"
-                loading="eager"
-                decoding="async"
-              />
-            </div>
+          <p className="h4 my-2">NPR. {totalPrice * quantity}</p>
 
-            <div className="carousel-item ">
-              <Image
-                src={demo}
-                height={600}
-                width={500}
-                layout="responsive"
-                objectFit="cover"
-                quality="10"
-                loading="eager"
-                decoding="async"
+          <div className="d-flex align-items-center gap-2 mt-3">
+            <p className="h6">Qty : </p>
+            <div className="d-flex align-items-center gap-1">
+              <TbMinus
+                onClick={decreaseQuantity}
+                size={20}
+                className="cp "
               />
-            </div>
-
-            <div className="carousel-item ">
-              <Image
-                src={demo}
-                height={600}
-                width={500}
-                layout="responsive"
-                objectFit="cover"
-                quality="10"
-                loading="eager"
-                decoding="async"
-              />
-            </div>
-
-            <div className="carousel-item ">
-              <Image
-                src={demo}
-                height={600}
-                width={500}
-                layout="responsive"
-                objectFit="cover"
-                quality="10"
-                loading="eager"
-                decoding="async"
+              <p className="no_selection h6">{quantity}</p>
+              <MdAdd
+                onClick={increaseQuantity}
+                size={20}
+                className="cp"
               />
             </div>
           </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
 
-        <div
-          className="productDetail col col-md-4 col-lg-4 align-self-start sticky-top mt-0 mt-sm-1 mt-md-4 mt-lg-5"
-          style={{ top: "80px" }}>
-          <h1 className="h3 text-uppercase fw-bold mb-3 mt-0 mt-sm-1 mt-md-4 mt-lg-5">NAme</h1>
-          Lorem ipsum dolor sit amet?
-          <div className="mt-2">
-            <strong>NPRS.500</strong>
-            <s> </s>
-          </div>
-          <div className="color d-flex gap-3 my-3">
-            return (
-            <button
-              // className={props.data.colorid == item._id ? `border-dark select_color` : ` border `}
-              style={{
-                height: "30px",
-                width: "30px",
-                // backgroundColor: `${item.name}`,
-              }}></button>
-            );
-          </div>
-          <div className="btn-group d-flex gap-3 my-4">
-            return <button className="outline_button">Item NAme</button>;
-          </div>
-          <div className="button mb-4 mt-2">
-            <button
-              className="global_black_button w-100"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#cartoffcanvasNavbar"
-              aria-controls="offcanvasNavbar">
-              Add to Cart
-            </button>
-          </div>
-          <div className="details">
-            <h1 className="h3 text-uppercase fs-5 fw-bold text-uppercase mb-3">product details</h1>
-            <div className="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam doloremque officia dicta deserunt ad impedit, aperiam quasi possimus assumenda nemo amet consectetur quos, quas quod.</div>
+          <div className="d-flex flex-column gap-3 mt-4 no_selection">
+            <div className="details">
+              <h1 className="h3 text-uppercase fs-5 fw-bold text-uppercase ">product details</h1>
+              <div className="">A bomber jacket is a stylish and versatile jacket that is typically short in length, with a front zip closure, elasticated cuffs, and waistband. Originally designed for military pilots, bomber jackets are now a popular fashion item and are available in a variety of materials such as leather, nylon, and cotton.</div>
+            </div>
+
+            <div className="d-flex gap-2">
+              <button
+                onClick={addToCart}
+                type="button"
+                className="global_black_button w-100">
+                Add to Cart
+              </button>
+
+              <Link href={"/checkout"}>
+                <button
+                  type="button"
+                  className="global_black_button w-100">
+                  Buy Now
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

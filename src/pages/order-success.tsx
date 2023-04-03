@@ -27,7 +27,7 @@ export default function OrderSuccess() {
         <a
           href="http://localhost:3000/"
           className="text-decoration-none  ">
-          See my orders
+         Back
         </a>
       </div>
     </div>

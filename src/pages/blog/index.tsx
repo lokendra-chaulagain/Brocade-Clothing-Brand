@@ -4,7 +4,7 @@ import NewsLetter from "../../components/NewsLetter";
 
 const Blog = () => {
   return (
-    <div className="paddingTop">
+    <div className="container paddingTop">
       <BlogCard />
       <NewsLetter/>
     </div>

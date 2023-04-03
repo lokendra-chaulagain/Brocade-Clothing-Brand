@@ -2,16 +2,13 @@ import React from "react";
 
 export default function NewsLetter() {
   const handleSubscribe = () => {
-    console.log("gdgdgd")
-
+    console.log("gdgdgd");
   };
   return (
-    <div className="news_letter_wrapper">
-
-    <div className="container my-5 ">
+    <div className="container">
       <p className="h1 fw-bold text-center text-white mb-3">Subscribe Our News Letter</p>
       <div onClick={handleSubscribe}>
-        <div className=""  >
+        <div className="">
           <p className="col-form-label  text-white text-center mb-2">GET NOTIFIED ABOUT NEW PRODUCT ARRIVALS AND EARLY RELEASE INFO</p>
           <input
             type="email"
@@ -28,7 +25,6 @@ export default function NewsLetter() {
           subscribe
         </button>
       </div>
-    </div>
     </div>
   );
 }

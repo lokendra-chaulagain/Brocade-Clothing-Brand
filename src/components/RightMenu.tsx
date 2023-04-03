@@ -83,6 +83,15 @@ export default function RightMenu() {
               </p>
             </Link>
 
+
+            <Link href={"/about"}>
+              <p
+                className="cp"
+                data-bs-dismiss="offcanvas">
+                About us
+              </p>
+            </Link>
+
             <hr className="mb-0" />
             <Link href={"/profile"}>
               <p

@@ -2,6 +2,7 @@
     {
         "id": 1,
         "title": "Nepal's Emerging Fashion Scene",
+        "slug": "Nepal-Emerging-Fashion-Scene",
         "description": "Nepal's fashion scene is a sustainable and innovative space, blending tradition with modernity. Designers draw inspiration from the country's rich culture and natural beauty to create unique pieces.",
         "createdAt": "2 days ago",
         "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680421484/Brocade/Blogs/blog-1_lungbu.jpg"
@@ -9,6 +10,7 @@
     {
         "id": 2,
         "title": "How to Dress Like a Nepali Style Icon",
+        "slug": "How-to-Dress-Like-a-Nepali-Style-Icon",
         "description": "To dress like a Nepali style icon, embrace traditional clothing such as saris and dhaka topis. Add a modern twist with bold colors and unique accessories, drawing inspiration from the country's cultural heritage.  ",
         "createdAt": "2 days ago",
         "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680421482/Brocade/Blogs/blog-2_mbmnhq.webp"
@@ -16,6 +18,7 @@
     {
         "id": 3,
         "title": "Nepali Fashion Brands You Need to Know",
+        "slug": "Nepali-Fashion-Brands-You-Need-to-Know",
         "description": "Explore Nepali fashion brands that are making waves in the industry with their sustainable and innovative designs. From haute couture to streetwear, these brands blend tradition with modernity in unique ways.",
         "createdAt": "2 days ago",
         "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680421482/Brocade/Blogs/blog-3_o92o3b.jpg"
@@ -23,6 +26,7 @@
     {
         "id": 4,
         "title": "Nepali Fashion Influencer",
+        "slug": "Nepali-Fashion-Influencer",
         "description": "Nepali fashion influencers are making their mark on the industry, showcasing traditional and modern styles alike. From streetwear to haute couture, these influencers inspire with their bold and unique fashion choices.",
         "createdAt": "2 days ago",
         "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680421482/Brocade/Blogs/blog-4_hczmqm.jpg"
@@ -30,6 +34,7 @@
     {
         "id": 5,
         "title": "Nepal's Emerging Fashion Designers",
+        "slug": "Nepal-Emerging-Fashion-Designers",
         "description": "Nepal's emerging fashion designers are pushing the boundaries of traditional Nepali clothing. With a focus on sustainability and innovation, these designers create unique and innovative pieces that are gaining recognition on the global stage.  ",
         "createdAt": "2 days ago",
         "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680421482/Brocade/Blogs/blog-5_iynega.jpg"
@@ -37,6 +42,7 @@
     {
         "id": 6,
         "title": "Eco-Friendly Fashion in Nepal",
+        "slug": "Eco-Friendly-Fashion-in-Nepal",
         "description": "Eco-friendly fashion is on the rise in Nepal, with designers using sustainable materials and practices to create beautiful and unique pieces. From organic cotton to upcycling, Nepali fashion is becoming more environmentally conscious.        ",
         "createdAt": "2 days ago",
         "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680421482/Brocade/Blogs/blog-6_p98usi.jpg"
@@ -44,6 +50,7 @@
     {
         "id": 7,
         "title": "Elevate Your Wardrobe with Nepali Designer Fashion",
+        "slug": "Elevate-Your-Wardrobe-with-Nepali-Designer-Fashion",
         "description": "Elevate your wardrobe with the unique and innovative designs of Nepali fashion designers. From traditional to modern, these pieces blend culture with creativity for a one-of-a-kind look.        ",
         "createdAt": "2 days ago",
         "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680421482/Brocade/Blogs/blog-7_ncst4c.jpg"

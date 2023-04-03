@@ -6,6 +6,7 @@ import Image from "next/image";
 import style from "../../styles/slider.module.css";
 import { Navigation } from "swiper";
 import banners from "../data/banners.json";
+import Link from "next/link";
 
 const Slider = () => {
   return (
@@ -21,11 +22,13 @@ const Slider = () => {
               <div className="col d-flex flex-column align-items-center">
                 <p className="h1 fw-bold">BROCADE 2.0</p>
                 <p className="h4 text-center">We believe in change, we believe in growth, we believe in us, we believe in you, we believe in youth.</p>
-                <button
-                  type="submit"
-                  className="global_black_button  px-4 mt-2">
-                  PRE-ORDER
-                </button>
+                <Link href={"/product/bomber-jacket-premium-original-brocade"}>
+                  <button
+                    type="submit"
+                    className="global_black_button  px-4 mt-2">
+                    PRE-ORDER
+                  </button>
+                </Link>
               </div>
 
               <div className={`${style.banner_image} col`}>
