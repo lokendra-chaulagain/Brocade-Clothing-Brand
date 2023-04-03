@@ -1,7 +1,6 @@
 import React from "react";
 import CartSection from "../components/checkout/CartSection";
 import CheckOutForm from "../components/checkout/CheckOutForm";
-import VerifyPhone from "../components/checkout/VerifyPhone";
 
 export default function checkout() {
   return (
@@ -10,7 +9,6 @@ export default function checkout() {
         <CheckOutForm />
         <CartSection />
       </div>
-      <VerifyPhone />
     </div>
   );
 }

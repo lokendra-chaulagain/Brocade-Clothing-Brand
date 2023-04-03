@@ -17,7 +17,7 @@ export default function CheckoutPaymentOption() {
 
   return (
     <div>
-      <h6 className="h6 text-uppercase">
+      <h6 className="h6 ">
         <small className="text-muted fw-bold">express checkout</small>
       </h6>
       <div className="card rounded-0">
@@ -25,22 +25,22 @@ export default function CheckoutPaymentOption() {
           <button
             onClick={selectEsewa}
             type="button"
-            className={paymentMode == "esewa" ? `global_black_button no_transform w-100 ` : `outline_button w-100`}>
-            E-Sewa
+            className={paymentMode == "esewa" ? `global_black_button  w-100 ` : ` global_black_button_outline  w-100`}>
+            E-SEWA
           </button>
 
           <button
             onClick={selectCard}
             type="button"
-            className={paymentMode == "card" ? `global_black_button no_transform w-100` : `outline_button w-100`}>
-            Card
+            className={paymentMode == "card" ? `global_black_button  w-100` : ` global_black_button_outline   w-100`}>
+            CARD
           </button>
 
           <button
             onClick={selectCash}
             type="button"
-            className={paymentMode == "cash" ? `global_black_button no_transform w-100` : `outline_button w-100`}>
-            Cash
+            className={paymentMode == "cash" ? `global_black_button  w-100` : `global_black_button_outline  w-100`}>
+            CASH
           </button>
         </div>
       </div>

@@ -301,6 +301,21 @@ a:hover {
   transition: all 0.5s ease-in-out;
 }
 
+.global_black_button_outline {
+  background-color: white;
+  color: black;
+  padding: 10px 18px;
+  border: none;
+  text-transform: uppercase;
+}
+
+.global_black_button_outline:hover {
+  background-color: rgb(31, 31, 31);
+  transform: translateY(-1px);
+  transition: all 0.5s ease-in-out;
+  color: white;
+}
+
 .outline_button {
   border: 1px solid black;
   padding: 5px 15px;
@@ -493,7 +508,6 @@ input::placeholder {
 .z_999 {
   z-index: 999;
 }
-
 
 .no_selection {
   -webkit-touch-callout: none;

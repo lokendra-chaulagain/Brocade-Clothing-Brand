@@ -14,7 +14,7 @@ export default function UserHead() {
       />
       <ul className="dropdown-menu mt-3 rounded-0">
         <li>
-          <Link href="/account">
+          <Link href="/profile">
             <a className="dropdown-item">Profile</a>
           </Link>
         </li>

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import style from "styled-jsx/style";
 import { TbMenu } from "react-icons/tb";
 
 export default function RightMenu() {
@@ -8,7 +7,7 @@ export default function RightMenu() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <div>
+    <div className="no_selection">
       <button
         className="border-0 p-0 btn"
         type="button"
@@ -84,6 +83,23 @@ export default function RightMenu() {
               </p>
             </Link>
 
+            <hr className="mb-0" />
+            <Link href={"/profile"}>
+              <p
+                className="cp"
+                data-bs-dismiss="offcanvas">
+                Profile
+              </p>
+            </Link>
+
+            <Link href={"/login"}>
+              <p
+                className="cp"
+                data-bs-dismiss="offcanvas">
+                Login
+              </p>
+            </Link>
+
             <Link href={"/register"}>
               <p
                 className="cp"
@@ -91,6 +107,8 @@ export default function RightMenu() {
                 Register
               </p>
             </Link>
+
+            <hr className="mt-0" />
 
             <Link href={"/privacy-policy"}>
               <p
@@ -111,6 +129,7 @@ export default function RightMenu() {
 
           <Link href="/exclusive">
             <button
+              type="button"
               data-bs-dismiss="offcanvas"
               className="global_black_button w-100 mt-3">
               Exclusive
