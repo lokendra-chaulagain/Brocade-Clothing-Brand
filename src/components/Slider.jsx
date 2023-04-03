@@ -19,7 +19,7 @@ const Slider = () => {
         {banners.map((banner, id) => (
           <SwiperSlide key={id}>
             <div className="row d-flex align-items-center">
-              <div className="col d-flex flex-column align-items-center">
+              <div className="col-12 col-md-6 d-flex flex-column align-items-center">
                 <p className="h1 fw-bold">BROCADE 2.0</p>
                 <p className="h4 text-center">We believe in change, we believe in growth, we believe in us, we believe in you, we believe in youth.</p>
                 <Link href={"/product/bomber-jacket-premium-original-brocade"}>

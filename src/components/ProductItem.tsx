@@ -8,20 +8,15 @@ export default function ProductItem() {
     <div className="row d-flex">
       {products &&
         products.map((product: any, id: any) => (
-          <div className="col-3 card-group ">
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3 card-group ">
             <div className="cursor-pointer card border-0 mb-4">
               <Link href={"/product/bomber-jacket-premium-original-brocade"}>
-                <div
-                  className="position-relative product_wrapper"
-                  style={{ height: "420px", width: "480px" }}>
-                  <Image
-                    className="product_image"
-                    src={product.image}
-                    objectFit="scale-down"
-                    height={1000}
-                    width={1000}
-                  />
-                </div>
+                <Image
+                  src={product.image}
+                  objectFit="scale-down"
+                  height={500}
+                  width={500}
+                />
               </Link>
 
               <div className={`card-body text-center`}>
