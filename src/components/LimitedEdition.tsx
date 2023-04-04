@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import BookModal from "./BookModal";
 
 const LimitedEdition = ({ title, image }: any) => {
@@ -28,14 +27,9 @@ const LimitedEdition = ({ title, image }: any) => {
           src={image}
           alt="hello"
           height={500}
+          width={500}
         />
-        {/* <Link href={"/product/limited-edition-bomber-jacket"}>
-          <button
-            type="button"
-            className="px-2 bg-black color_white border-0 mt-2">
-            Book Now
-          </button>
-        </Link> */}
+
         <BookModal />
       </div>
     </div>

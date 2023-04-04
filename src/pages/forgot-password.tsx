@@ -1,9 +1,8 @@
 import React from "react";
 import ResetPassword from "../components/checkout/ResetPassword";
-import RegisterSuggest from "../components/account/Registersuggest";
+import RegisterSuggest from "../components/account/RegisterSuggest";
 
 export default function ForgotPassword() {
- 
   return (
     <div className="container paddingTop">
       <div className="row row-cols-1 row-cols-md-1">

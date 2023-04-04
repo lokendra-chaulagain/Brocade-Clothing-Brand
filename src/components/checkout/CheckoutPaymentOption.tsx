@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { toast } from "react-toastify";
 
 export default function CheckoutPaymentOption() {
   const [paymentMode, setPaymentMode] = useState("esewa");

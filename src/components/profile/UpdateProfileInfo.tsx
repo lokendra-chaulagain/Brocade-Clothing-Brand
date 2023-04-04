@@ -22,7 +22,7 @@ export default function UpdateProfileInfo() {
     <div>
       <button
         type="button"
-        className="global_black_button py-1 rounded-1"
+        className="global_black_button py-1 rounded-0"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal">
         Edit Profile
@@ -88,7 +88,7 @@ export default function UpdateProfileInfo() {
                     type="button"
                     data-bs-dismiss="modal"
                     aria-label="Close"
-                    className="outline_button flex-fill">
+                    className="global_outline_button flex-fill">
                     Close
                   </button>
 

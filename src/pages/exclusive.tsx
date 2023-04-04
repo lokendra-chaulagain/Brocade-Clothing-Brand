@@ -2,7 +2,7 @@ import React from "react";
 import ExclusiveProduct from "../components/exclusive/ExclusiveProduct";
 import GiveAway from "../components/exclusive/GiveAway";
 
-export default function Exclusive() {
+export default function exclusive() {
   return (
     <div className="pt-5">
       <ExclusiveProduct />

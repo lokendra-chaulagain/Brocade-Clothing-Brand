@@ -3,8 +3,7 @@ import Customization from "../components/exclusive/Customization";
 
 export default function custom() {
   return (
-    <div>
-      <p className="h2 fw-bold ps-3 ">WE OFFERS CUSTOMIZATION DESIGN</p>
+    <div className="pt-0 pt-md-4 ">
       <Customization />
     </div>
   );

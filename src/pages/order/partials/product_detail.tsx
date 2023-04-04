@@ -1,6 +1,6 @@
 import React from 'react'
 
-function  product_detail(props) {
+function  product_detail(props: { order_detail: any; }) {
     let details= props.order_detail;
     let i=0;
   return (
@@ -46,7 +46,7 @@ function  product_detail(props) {
 
 {
 
-details&&details.map((row)=>{
+details&&details.map((row:any)=>{
 
 return <tr>
    <td>

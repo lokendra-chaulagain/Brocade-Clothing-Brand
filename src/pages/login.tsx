@@ -69,12 +69,12 @@ export default function login() {
             <div className="row mb-2">
               <div className="col-md-6 col-5">
                 <Link href="/forgot-password">
-                  <a className="ghostBtn align-right">Forgot password</a>
+                  <a className=" align-right ">Forgot password</a>
                 </Link>
               </div>
 
               <div className="col-md-6 text-end col-7">
-                <a className="cursor-pointer ghostBtn align-right outline-none border-0 border-none btn">Login via Email</a>
+                <a className="cursor-pointer  align-right outline-none border-0 text-decoration-underline border-none btn">Login via Email</a>
               </div>
             </div>
 

@@ -59,11 +59,11 @@ const SingleProduct = () => {
           <div className="d-flex align-items-center gap-3">
             <p className="h5">Colors : </p>
             <div className="color d-flex gap-3 my-3">
-              <p className="p-2 cp  bg-secondary"></p>
-              <p className="p-2 cp  bg-primary"></p>
-              <p className="p-2 cp  bg-danger"></p>
-              <p className="p-2 cp  bg-warning"></p>
-              <p className="p-2 cp  bg-black"></p>
+              <p className="p-2 cursor-pointer  bg-secondary"></p>
+              <p className="p-2 cursor-pointer  bg-primary"></p>
+              <p className="p-2 cursor-pointer  bg-danger"></p>
+              <p className="p-2 cursor-pointer  bg-warning"></p>
+              <p className="p-2 cursor-pointer  bg-black"></p>
             </div>
           </div>
 
@@ -75,13 +75,13 @@ const SingleProduct = () => {
               <TbMinus
                 onClick={decreaseQuantity}
                 size={20}
-                className="cp "
+                className="cursor-pointer "
               />
               <p className="no_selection h6">{quantity}</p>
               <MdAdd
                 onClick={increaseQuantity}
                 size={20}
-                className="cp"
+                className="cursor-pointer"
               />
             </div>
           </div>

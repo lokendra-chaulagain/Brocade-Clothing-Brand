@@ -45,7 +45,7 @@ export default function RightMenu() {
           <div className="d-flex flex-column gap-2 ">
             <Link href={"/"}>
               <p
-                className="cp"
+                className="cursor-pointer hover_underline"
                 data-bs-dismiss="offcanvas">
                 Home
               </p>
@@ -53,7 +53,7 @@ export default function RightMenu() {
 
             <Link href={"/shop"}>
               <p
-                className="cp"
+                className="cursor-pointer hover_underline"
                 data-bs-dismiss="offcanvas">
                 Shop
               </p>
@@ -61,7 +61,7 @@ export default function RightMenu() {
 
             <Link href={"/exclusive"}>
               <p
-                className="cp"
+                className="cursor-pointer hover_underline"
                 data-bs-dismiss="offcanvas">
                 Exclusive
               </p>
@@ -69,7 +69,7 @@ export default function RightMenu() {
 
             <Link href={"/custom"}>
               <p
-                className="cp"
+                className="cursor-pointer hover_underline"
                 data-bs-dismiss="offcanvas">
                 Customization
               </p>
@@ -77,7 +77,7 @@ export default function RightMenu() {
 
             <Link href={"/lunching"}>
               <p
-                className="cp"
+                className="cursor-pointer hover_underline"
                 data-bs-dismiss="offcanvas">
                 Lunching Soon
               </p>
@@ -85,7 +85,7 @@ export default function RightMenu() {
 
             <Link href={"/contact"}>
               <p
-                className="cp"
+                className="cursor-pointer hover_underline"
                 data-bs-dismiss="offcanvas">
                 Contact
               </p>
@@ -93,7 +93,7 @@ export default function RightMenu() {
 
             <Link href={"/blog"}>
               <p
-                className="cp"
+                className="cursor-pointer hover_underline"
                 data-bs-dismiss="offcanvas">
                 Blog
               </p>
@@ -101,7 +101,7 @@ export default function RightMenu() {
 
             <Link href={"/about"}>
               <p
-                className="cp"
+                className="cursor-pointer hover_underline"
                 data-bs-dismiss="offcanvas">
                 About us
               </p>
@@ -110,7 +110,7 @@ export default function RightMenu() {
             <hr className="mb-0" />
             <Link href={"/profile"}>
               <p
-                className="cp"
+                className="cursor-pointer hover_underline"
                 data-bs-dismiss="offcanvas">
                 Profile
               </p>
@@ -118,7 +118,7 @@ export default function RightMenu() {
 
             <Link href={"/login"}>
               <p
-                className="cp"
+                className="cursor-pointer hover_underline"
                 data-bs-dismiss="offcanvas">
                 Login
               </p>
@@ -126,7 +126,7 @@ export default function RightMenu() {
 
             <Link href={"/register"}>
               <p
-                className="cp"
+                className="cursor-pointer hover_underline"
                 data-bs-dismiss="offcanvas">
                 Register
               </p>
@@ -136,7 +136,7 @@ export default function RightMenu() {
 
             <Link href={"/privacy-policy"}>
               <p
-                className="cp"
+                className="cursor-pointer hover_underline"
                 data-bs-dismiss="offcanvas">
                 Privacy Policy
               </p>
@@ -144,7 +144,7 @@ export default function RightMenu() {
 
             <Link href={"/terms-conditions"}>
               <p
-                className="cp"
+                className="cursor-pointer hover_underline"
                 data-bs-dismiss="offcanvas">
                 Terms and Conditions
               </p>

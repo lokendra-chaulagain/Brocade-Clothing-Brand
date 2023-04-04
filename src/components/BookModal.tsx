@@ -88,7 +88,7 @@ export default function BookModal() {
                     type="button"
                     data-bs-dismiss="modal"
                     aria-label="Close"
-                    className="outline_button flex-fill">
+                    className="global_outline_button flex-fill">
                     Close
                   </button>
 

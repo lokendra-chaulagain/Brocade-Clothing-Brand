@@ -122,11 +122,7 @@ const register = () => {
               Register
             </button>
             <Link href="/login">
-              <button
-                type="button"
-                className="ghostBtn">
-                Back to Login
-              </button>
+              <p className="text-center my-2 cursor-pointer text-decoration-underline">Back to Login</p>
             </Link>
           </div>
         </div>

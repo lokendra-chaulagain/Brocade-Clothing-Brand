@@ -1,9 +1,10 @@
 import LimitedEdition from "../components/LimitedEdition";
 import ProductItem from "../components/ProductItem";
 import Slider from "../components/Slider";
-import yellow from "../assets/products/jacket-yellow-1.webp";
+import products from "../data/products.json";
 
 export default function Home() {
+  const limited = products[1].image;
   return (
     <div className="">
       <Slider />
@@ -13,7 +14,7 @@ export default function Home() {
 
         <LimitedEdition
           title={"LIMITED EDITION SERIES"}
-          image={yellow}
+          image={limited}
         />
       </div>
     </div>

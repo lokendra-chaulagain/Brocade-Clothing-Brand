@@ -16,7 +16,7 @@ const BlogCard = () => {
                 height={1000}
                 width={1000}
               />
-              <a href={`blog/${blog.slug}`} className="card-body cp">
+              <a href={`blog/${blog.slug}`} className="card-body cursor-pointer">
                 <h5 className="blogTitle">{blog.title}</h5>
                 <p className="">{blog.description.substring(0, 150)} . . .</p>
               </a>

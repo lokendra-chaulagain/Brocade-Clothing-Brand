@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProductItem from "../components/ProductItem";
-import Customization from "../components/exclusive/Customization";
 import { BiSortUp, BiSortDown } from "react-icons/bi";
+import Customization from "../components/exclusive/Customization";
 
 export default function shop() {
   const [sort, setSort] = useState("expensive");
@@ -22,7 +22,7 @@ export default function shop() {
           {sort == "cheap" && (
             <BiSortUp
               onClick={selectExpensive}
-              className="cp"
+              className="cursor-pointer"
               size={26}
             />
           )}
@@ -30,7 +30,7 @@ export default function shop() {
           {sort == "expensive" && (
             <BiSortDown
               onClick={selectCheap}
-              className="cp"
+              className="cursor-pointer"
               size={26}
             />
           )}

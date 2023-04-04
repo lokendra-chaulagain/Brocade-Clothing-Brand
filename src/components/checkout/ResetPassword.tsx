@@ -43,7 +43,7 @@ export default function ResetPassword() {
         <Link href={"/login"}>
           <button
             type="button"
-            className="ghostBtn align-right w-100">
+            className=" align-right w-100">
             Cancel
           </button>
         </Link>

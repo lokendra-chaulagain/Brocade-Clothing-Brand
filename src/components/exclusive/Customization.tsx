@@ -112,7 +112,7 @@ const Customization = () => {
         </motion.div>
       </div>
 
-      {/* <div className=" row d-flex align-items-center pt-5 pt-lg-0 ">
+      <div className=" row d-flex align-items-center pt-5 pt-lg-0 ">
         <motion.div
           className="col-12 col-md-6"
           initial="imgScreen"
@@ -150,7 +150,7 @@ const Customization = () => {
             </motion.button>
           </Link>
         </motion.div>
-      </div> */}
+      </div>
     </div>
   );
 };

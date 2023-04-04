@@ -1,19 +1,20 @@
 import Image from "next/image";
 import React from "react";
-import red1 from "../../assets/products/jacket-red-1.webp";
-import red2 from "../../assets/products/jacket-red-2.webp";
-import red3 from "../../assets/products/jacket-red-3.webp";
-import red4 from "../../assets/products/jacket-red-4.webp";
 import Link from "next/link";
+import products from "../../data/whiteJackets.json";
 
 export default function ExclusiveProduct() {
+  const white1 = products[0].image;
+  const white2 = products[1].image;
+  const white3 = products[2].image;
+  const white4 = products[3].image;
   return (
     <div className="container">
       <div className="row d-flex align-items-center">
         <div className="col-12  col-md-6">
           <Image
             className=""
-            src={red1}
+            src={white1}
             height={500}
             width={500}
             objectFit="scale-down"
@@ -23,12 +24,15 @@ export default function ExclusiveProduct() {
         <div className="col-12 col-md-6">
           <div className="mt-5">
             <p className="h2 mb-2">Res Jump Suit Jacket</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur praesentium a obcaecati expedita assumenda cumque quaerat, deleniti alias autem perspiciatis provident beatae facere, quasi pariatur saepe quisquam quos nihil distinctio quam corrupti impedit quas! Perferendis amet dolorem sit alias facere totam porro autem a cum ullam molestias, quas sequi labore qui est unde dolor obcaecati error sint, quia, vel ratione.</p>
+            <p>
+              Res Jump Suit jacket is a classic and stylish piece of outerwear that has been popular for decades. It is a versatile garment that can be worn in a variety of settings, from casual outings to more formal occasions. Bomber jackets were originally designed for pilots during World War II, and they have since become a staple of men's fashion.Men's bomber jackets are suitable for all seasons, making them a great investment for any wardrobe. They are perfect for layering over a t-shirt
+              or sweater in the cooler months or for wearing on their own during the warmer months.
+            </p>
             <Link href={"/product/exclusive-bomber-jacket-premium-original-brocade"}>
               <button
                 type="button"
                 className="global_black_button mt-3">
-                Book Now 
+                Book Now
               </button>
             </Link>
           </div>
@@ -39,7 +43,7 @@ export default function ExclusiveProduct() {
         <div className="col-12 col-lg-4">
           <Image
             className=""
-            src={red2}
+            src={white2}
             height={500}
             width={500}
             objectFit="scale-down"
@@ -49,7 +53,7 @@ export default function ExclusiveProduct() {
         <div className="col-12 col-lg-4">
           <Image
             className=""
-            src={red3}
+            src={white3}
             height={500}
             width={500}
             objectFit="scale-down"
@@ -59,7 +63,7 @@ export default function ExclusiveProduct() {
         <div className="col-12 col-lg-4">
           <Image
             className=""
-            src={red4}
+            src={white4}
             height={500}
             width={500}
             objectFit="scale-down"

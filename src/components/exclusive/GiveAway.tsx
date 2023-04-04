@@ -1,28 +1,20 @@
-import Image from "next/image";
-import React, { useEffect, useRef } from "react";
-import Style from "../../../styles/Giveaway.module.css";
+import React from "react";
+import { toast } from "react-toastify";
 
 export default function GiveAway() {
-  const vidRef = useRef(undefined);
-  useEffect(() => {
-    vidRef.current.play();
-  }, []);
-
+  const enterGiveAway = () => {
+    toast.error("Giveaway Full");
+  };
   return (
-    <section className={Style.brVideo}>
-      {/* <div className="overlay"></div> */}
-      <video
-        ref={vidRef}
-        src="https://designsupply-web.com/samplecontent/vender/codepen/20181014.mp4"
-        autoPlay
-        loop
-        muted
-      />
-      <div className={`${Style.giveAway}`}>
-        <h1>Giveaway</h1>
-        <h3>20 hr. 12 min. 19 sec.</h3>
-        <button className="global_black_button mt-3 px-4">Enter the giveAway</button>
-      </div>
+    <section className="news_letter_wrapper text-white ">
+      <p className="h1">Giveaway</p>
+      <p className="h4">20 hr. 12 min. 19 sec.</p>
+      <button
+        type="button"
+        onClick={enterGiveAway}
+        className="global_black_button mt-3 px-4">
+        Enter the giveAway
+      </button>
     </section>
   );
 }

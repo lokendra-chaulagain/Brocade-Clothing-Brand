@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "email": "brocade.kathmandu@gmail.com",
+        "phone": "9864776545473",
+        "address": "Kathmandu Nepal",
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680607291/Brocade/stores/store-1_kjthj6.jpg"
+    },
+    {
+        "id": "2",
+        "email": "brocade.chitwan@gmail.com",
+        "phone": "9864776545473",
+        "address": "Chitwan Nepal",
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680607292/Brocade/stores/store-3_e6vvkg.jpg"
+    },
+    {
+        "id": "3",
+        "email": "brocade.pokhara@gmail.com",
+        "phone": "9864776545473",
+        "address": "Pokhara Nepal",
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680607291/Brocade/stores/store-4_abeykt.jpg"
+    },
+    {
+        "id": "4",
+        "email": "brocade.nepaljung@gmail.com",
+        "phone": "9864776545473",
+        "address": "Nepaljung Nepal",
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680607291/Brocade/stores/store-2_auh31r.jpg"
+    }
+]

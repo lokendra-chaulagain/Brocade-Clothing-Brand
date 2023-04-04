@@ -1,14 +1,15 @@
 import Link from "next/link";
 import React from "react";
-import demo from "../assets/gloves/0.webp";
-import demo1 from "../assets/gloves/1.webp";
-import demo2 from "../assets/gloves/2.webp";
-import demo3 from "../assets/gloves/3.webp";
-import demo4 from "../assets/gloves/4.webp";
 import Image from "next/image";
 import BookModal from "../components/BookModal";
+import gloves from "../data/gloves.json";
 
 export default function Lunching() {
+  const glove0 = gloves[0].image;
+  const glove1 = gloves[1].image;
+  const glove2 = gloves[2].image;
+  const glove3 = gloves[3].image;
+  const glove4 = gloves[4].image;
   return (
     <div className="container pt-5">
       <div
@@ -33,7 +34,7 @@ export default function Lunching() {
         <div className="d-flex flex-column align-items-center justify-content-center">
           <Image
             objectFit="scale-down"
-            src={demo}
+            src={glove0}
             alt="img"
             height={300}
             width={300}
@@ -47,7 +48,7 @@ export default function Lunching() {
         <div className="col">
           <Image
             objectFit="scale-down"
-            src={demo1}
+            src={glove1}
             alt="img"
             height={600}
             width={600}
@@ -55,7 +56,7 @@ export default function Lunching() {
 
           <Image
             objectFit="scale-down"
-            src={demo2}
+            src={glove2}
             alt="img"
             height={600}
             width={600}
@@ -67,7 +68,7 @@ export default function Lunching() {
         <div className="col">
           <Image
             objectFit="scale-down"
-            src={demo3}
+            src={glove3}
             alt="img"
             height={600}
             width={600}
@@ -75,7 +76,7 @@ export default function Lunching() {
 
           <Image
             objectFit="scale-down"
-            src={demo4}
+            src={glove4}
             alt="img"
             height={600}
             width={600}

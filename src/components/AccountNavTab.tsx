@@ -30,7 +30,7 @@ const AccountNavTab = () => {
           className="nav-item mr-5"
           role="presentation">
           <button
-            className="nav-link active text-dark"
+            className="nav-link active text-dark global_black_button"
             data-bs-toggle="pill"
             data-bs-target="#launch"
             type="button"
@@ -43,7 +43,7 @@ const AccountNavTab = () => {
           className="nav-item mr-5"
           role="presentation">
           <button
-            className="nav-link text-dark"
+            className="nav-link text-dark global_black_button"
             data-bs-toggle="pill"
             data-bs-target="#orders"
             type="button"
@@ -111,7 +111,7 @@ const AccountNavTab = () => {
                 type="text"
                 className="form-control rounded-0 "
                 placeholder="Old Password"
-                name="oldPassword"
+                id="oldPassword"
                 {...register("oldPassword", { required: true })}
               />
               {errors.oldPassword && <span className="text-danger">This field is required</span>}
@@ -122,7 +122,7 @@ const AccountNavTab = () => {
                 type="password"
                 className="form-control rounded-0 "
                 placeholder="New Password"
-                name="newPassword"
+                id="newPassword"
                 {...register("newPassword", { required: true })}
               />
               {errors.newPassword && <span className="text-danger">This field is required</span>}
@@ -133,7 +133,7 @@ const AccountNavTab = () => {
                 type="password"
                 className="form-control rounded-0 "
                 placeholder="Confirm Password"
-                name="confirmPassword"
+                id="confirmPassword"
                 {...register("confirmPassword", { required: true })}
               />
               {errors.confirmPassword && <span className="text-danger ">This field is required</span>}
@@ -177,14 +177,14 @@ const AccountNavTab = () => {
                     <td>44</td>
                     <td> 44</td>
                     <td>
-                      <span className="badge py-1 bg-danger cp no_selection">Pending</span>
+                      <span className="badge py-1 bg-danger cursor-pointer no_selection">Pending</span>
                     </td>
                     <td className="d-flex gap-1">
-                      <div className="d-flex align-items-center justify-content-center p-2 bg-warning rounded-2 cp">
+                      <div className="d-flex align-items-center justify-content-center p-2 bg-warning rounded-2 cursor-pointer">
                         <AiFillEye color="white" />
                       </div>
 
-                      <div className="d-flex align-items-center justify-content-center p-2 bg-danger rounded-2 cp">
+                      <div className="d-flex align-items-center justify-content-center p-2 bg-danger rounded-2 cursor-pointer">
                         <AiFillPrinter color="white" />
                       </div>
                     </td>
@@ -194,7 +194,7 @@ const AccountNavTab = () => {
             </div>
           </div>
 
-          <div className="smallDeviceTable">
+          <div className="smallDeviceTable d-block d-md-none ">
             <div
               className="tab-pane fade show  "
               id="orders"
@@ -229,8 +229,6 @@ const AccountNavTab = () => {
               </div>
             </div>
           </div>
-
-         
         </div>
       </div>
     </div>

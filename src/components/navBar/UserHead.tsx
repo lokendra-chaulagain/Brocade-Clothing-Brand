@@ -6,7 +6,7 @@ export default function UserHead() {
   return (
     <div className="dropdown d-none d-sm-block">
       <BsPersonCircle
-        className="dropdown-toggle cp"
+        className="dropdown-toggle cursor-pointer"
         data-bs-toggle="dropdown"
         aria-expanded="false"
         color="white"

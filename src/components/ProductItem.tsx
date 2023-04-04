@@ -9,7 +9,7 @@ export default function ProductItem() {
       {products &&
         products.map((product: any, id: any) => (
           <div className="col-12 col-sm-6 col-md-4 col-lg-3 card-group ">
-            <div className=" card border-0 mb-4 hover_underline no_selection">
+            <div className=" card border-0 mb-4 hover_underline no_selection ">
               <Image
                 className=""
                 src={product.image}

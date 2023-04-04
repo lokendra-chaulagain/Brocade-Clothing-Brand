@@ -1,20 +1,22 @@
 import React from "react";
 import Image from "next/image";
 import { AiOutlineDelete } from "react-icons/ai";
-import demo from "../assets/banner-1.webp";
 import { toast } from "react-toastify";
+import products from "../data/products.json";
 
 export default function CartItem() {
   const handleItemRemove = () => {
     toast.success("Items Remove Success");
   };
 
+  const image = products[0].image;
+
   return (
     <div className="card border-0 mb-3 ">
       <div className="row border pe-2">
         <div className="col-4 ">
           <Image
-            src={demo}
+            src={image}
             width={80}
             height={80}
             objectFit="scale-down"
@@ -29,7 +31,7 @@ export default function CartItem() {
                 <p className="text-muted small p-0">Qty</p>
                 <button
                   type="button"
-                  className="ghostBtn p-0">
+                  className=" p-0">
                   -
                 </button>
                 <span className="">
@@ -37,7 +39,7 @@ export default function CartItem() {
                 </span>
                 <button
                   type="button"
-                  className="ghostBtn p-0">
+                  className=" p-0">
                   +
                 </button>
               </div>
@@ -50,7 +52,7 @@ export default function CartItem() {
         </div>
         <div className="col-1 mt-2">
           <AiOutlineDelete
-            className="cp"
+            className="cursor-pointer"
             onClick={handleItemRemove}
             size={18}
             color="red"
