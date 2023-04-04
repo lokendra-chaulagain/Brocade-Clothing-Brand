@@ -2,7 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { AiOutlineDelete } from "react-icons/ai";
 import { toast } from "react-toastify";
-import products from "../data/products.json";
+import products from "../../data/products.json";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 export default function CartItem() {
   const handleItemRemove = () => {
@@ -29,19 +30,11 @@ export default function CartItem() {
             <div className="details f-flex flex-column">
               <div className="qty d-flex gap-3 align-items-center">
                 <p className="text-muted small p-0">Qty</p>
-                <button
-                  type="button"
-                  className=" p-0">
-                  -
-                </button>
+                <AiOutlineMinus className="cursor-pointer" />
                 <span className="">
                   <strong>5</strong>
                 </span>
-                <button
-                  type="button"
-                  className=" p-0">
-                  +
-                </button>
+                <AiOutlinePlus className="cursor-pointer" />
               </div>
               <div className="price d-flex gap-3 small">
                 <p className="text-muted p-0">Price</p>

@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
-import style from "../../styles/slider.module.css";
 import { Navigation } from "swiper";
 import banners from "../data/banners.json";
 import Link from "next/link";
@@ -32,9 +31,9 @@ const Slider = () => {
                   </Link>
                 </div>
 
-                <div className={`${style.banner_image} col`}>
+                <div className=" col">
                   <Image
-                    className={style.carImg}
+                    className=""
                     src={banner.image}
                     alt="img"
                     objectFit="scale-down"

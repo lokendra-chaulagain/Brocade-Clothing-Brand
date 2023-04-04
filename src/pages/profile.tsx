@@ -1,5 +1,5 @@
 import Image from "next/image";
-import AccountNavTab from "../components/AccountNavTab";
+import AccountNavTab from "../components/profile/AccountNavTab";
 import React from "react";
 import { toast } from "react-toastify";
 import UpdateProfileInfo from "../components/profile/UpdateProfileInfo";

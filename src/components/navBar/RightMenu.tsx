@@ -1,5 +1,8 @@
 import Link from "next/link";
 import React, { useState } from "react";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { FaFacebookSquare, FaTiktok } from "react-icons/fa";
+import { ImYoutube } from "react-icons/im";
 import { TbMenu } from "react-icons/tb";
 
 export default function RightMenu() {
@@ -159,6 +162,38 @@ export default function RightMenu() {
               Exclusive
             </button>
           </Link>
+
+          <div className="p-0 d-flex align-items-center justify-content-center gap-3 mt-2">
+            <a
+              href={"https://lokendra-portfolio.vercel.app"}
+              target="_blank"
+              className="cursor-pointer">
+              {" "}
+              <FaFacebookSquare className="cursor-pointer color-black" />
+            </a>
+
+            <a
+              href={"https://lokendra-portfolio.vercel.app"}
+              target="_blank"
+              className="cursor-pointer ">
+              {" "}
+              <AiOutlineInstagram className="cursor-pointer color-black" />
+            </a>
+
+            <a
+              href={"https://lokendra-portfolio.vercel.app"}
+              target="_blank">
+              {" "}
+              <FaTiktok className="cursor-pointer color-black" />
+            </a>
+
+            <a
+              href={"https://lokendra-portfolio.vercel.app"}
+              target="_blank">
+              {" "}
+              <ImYoutube className="cursor-pointer color-black" />
+            </a>
+          </div>
         </div>
       </div>
     </div>

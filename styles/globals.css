@@ -96,6 +96,11 @@ input::placeholder {
   color: black !important;
 }
 
+
+.color-black {
+  color: black !important;
+}
+
 .news_letter_wrapper {
   background-image: linear-gradient(to bottom, rgba(21, 21, 21, 0.328), rgba(5, 5, 5, 0.275)), url("https://res.cloudinary.com/dyof6o0ul/image/upload/v1680604690/Brocade/Newsletter/blog-1_lqfnml.jpg");
   background-repeat: no-repeat;

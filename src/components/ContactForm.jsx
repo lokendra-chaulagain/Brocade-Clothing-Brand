@@ -9,7 +9,6 @@ const ContactForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-
   const handleSend = async () => {};
 
   return (

@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "../../styles/failure.module.css";
-import { useRouter } from "next/router";
 import Link from "next/link";
 
 function OrderFailure() {

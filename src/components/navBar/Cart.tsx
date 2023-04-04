@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { useState } from "react";
 import { BsCartDash } from "react-icons/bs";
-import CartItem from "../CartItem";
+import CartItem from "./CartItem";
 
 const Cart = () => {
   const [menuOpen, setMenuOpen] = useState(false);

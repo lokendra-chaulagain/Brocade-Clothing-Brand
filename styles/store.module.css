@@ -1,8 +1,0 @@
-#store {
-    cursor: pointer;
-    transition: .25s;
-}
-
-#store:hover #title {
-    text-decoration: underline;
-}

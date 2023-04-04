@@ -1,8 +1,9 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 export default function NewsLetter() {
   const handleSubscribe = () => {
-    console.log("gdgdgd");
+    toast.success("Subscribe Success");
   };
   return (
     <div className="container">

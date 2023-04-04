@@ -30,7 +30,7 @@ export default function ResetPassword() {
             type="text"
             className="form-control rounded-0 "
             placeholder="Email or Phone"
-            name="phoneOrEmail"
+            id="phoneOrEmail"
             {...register("phoneOREmail", { required: true })}
           />
           {errors.phoneOREmail && <span className="text-danger">This field is required</span>}
@@ -41,11 +41,7 @@ export default function ResetPassword() {
           Send Verification Code
         </button>
         <Link href={"/login"}>
-          <button
-            type="button"
-            className=" align-right w-100">
-            Cancel
-          </button>
+          <p className="text-center mt-1 cursor-pointer text-decoration-underline">Cancel</p>
         </Link>
       </form>
     </div>

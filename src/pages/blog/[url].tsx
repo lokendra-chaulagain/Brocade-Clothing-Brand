@@ -1,5 +1,5 @@
 import React, {  } from "react";
-import SingleBlog from "../../components/SingleBlog";
+import SingleBlog from "../../components/blog/SingleBlog";
 
 function BlogId() {
   return (

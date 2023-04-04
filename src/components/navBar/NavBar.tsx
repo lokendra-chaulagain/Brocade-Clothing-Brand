@@ -1,7 +1,7 @@
 import React from "react";
 import Cart from "./Cart";
 import Link from "next/link";
-import RightMenu from "../RightMenu";
+import RightMenu from "./RightMenu";
 import UserHead from "./UserHead";
 
 const NavBar = () => {

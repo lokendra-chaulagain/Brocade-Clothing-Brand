@@ -1,7 +1,7 @@
 import React from "react";
-import NewsLetterModal from "./NewsLetterModal";
 import FooterSmallDeviceSubscribe from "./FooterSmallDeviceSubscribe";
 import FooterRightSide from "./FooterRightSide";
+import NewsLetterModal from "../NewsLetterModal";
 
 const Footer = () => {
   return (

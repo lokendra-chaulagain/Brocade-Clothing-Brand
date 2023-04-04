@@ -7,51 +7,40 @@ import Link from "next/link";
 
 export default function FooterRightSide() {
   return (
-    <div className="mt-2 d-flex flex-column align-items-center">
-      <ul className="p-0 d-flex gap-3">
-        <Link
-          href={"/"}
+    <div className="mt-2 d-flex gap-2 flex-column align-items-center">
+      <div className="p-0 d-flex gap-3">
+        <a
+          href={"https://lokendra-portfolio.vercel.app"}
           target="_blank"
-          className="cursor-pointer"
-          passHref>
-          <a
-            className="cursor-pointer text-dark"
-            target="_blank">
-            <FaFacebookSquare />
-          </a>
-        </Link>
+          className="cursor-pointer">
+          {" "}
+          <FaFacebookSquare className="cursor-pointer color-black" />
+        </a>
 
-        <Link
-          href={"/"}
+        <a
+          href={"https://lokendra-portfolio.vercel.app"}
           target="_blank"
-          className="cursor-pointer"
-          passHref>
-          <a
-            className="cursor-pointer text-dark"
-            target="_blank">
-            <AiOutlineInstagram />
-          </a>
-        </Link>
+          className="cursor-pointer ">
+          {" "}
+          <AiOutlineInstagram className="cursor-pointer color-black" />
+        </a>
 
-        <Link href={""}>
-          <a
-            className="cursor-pointer text-dark"
-            target="_blank">
-            <FaTiktok />
-          </a>
-        </Link>
+        <a
+          href={"https://lokendra-portfolio.vercel.app"}
+          target="_blank">
+          {" "}
+          <FaTiktok className="cursor-pointer color-black" />
+        </a>
 
-        <Link href={""}>
-          <a
-            className="cursor-pointer text-dark"
-            target="_blank">
-            <ImYoutube />
-          </a>
-        </Link>
-      </ul>
+        <a
+          href={"https://lokendra-portfolio.vercel.app"}
+          target="_blank">
+          {" "}
+          <ImYoutube className="cursor-pointer color-black" />
+        </a>
+      </div>
 
-      {/* =============== */}
-      <ul className="d-flex p-0 align-items-center custom-fs-11 gap-2 ">
+      <div className="d-flex p-0 align-items-center justify-content-center custom-fs-11 gap-2 ">
         <li>
           <Link href="/custom">
             <a className="text-dark text-decoration-none ">Customization</a>
@@ -75,9 +64,9 @@ export default function FooterRightSide() {
             <a className="text-dark text-decoration-none ">Login</a>
           </Link>
         </li>
-      </ul>
+      </div>
 
-      <ul className="d-flex p-0 align-items-center custom-fs-11 gap-2">
+      <div className="d-flex p-0 align-items-center custom-fs-11 gap-2">
         <li>
           <Link href="/about">
             <a className="text-dark text-decoration-none ">About</a>
@@ -96,12 +85,12 @@ export default function FooterRightSide() {
           </Link>
         </li>
 
-        <li className="" >
+        <li className="">
           <Link href="/terms-conditions">
             <a className="text-dark text-decoration-none ">Terms</a>
           </Link>
         </li>
-      </ul>
+      </div>
     </div>
   );
 }

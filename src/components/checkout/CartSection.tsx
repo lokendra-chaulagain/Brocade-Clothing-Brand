@@ -1,5 +1,5 @@
 import React from "react";
-import CartItem from "../CartItem";
+import CartItem from "../navBar/CartItem";
 import Link from "next/link";
 
 export default function CartSection() {
