@@ -39,7 +39,7 @@ export default function CheckOutForm() {
         <div className="select ">
           <select
             className="form-select rounded-0 mb-3 shadow-none"
-            placeholder="select one">
+            placeholder="Select Area">
             <option value="KTM Outside ring road">KTM Outside ring road</option>
             <option value="koteshwor Area">Koteshwor Area</option>
             <option value="bouddha">Bouddha</option>
@@ -109,7 +109,7 @@ export default function CheckOutForm() {
           {" "}
         </button>
       </div>
-      <VerifyPhone/>
+      <VerifyPhone />
     </div>
   );
 }

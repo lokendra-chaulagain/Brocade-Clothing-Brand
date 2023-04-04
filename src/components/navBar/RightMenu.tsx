@@ -110,6 +110,14 @@ export default function RightMenu() {
               </p>
             </Link>
 
+            <Link href={"/order/bomber-jacket-premium-green"}>
+              <p
+                className="cursor-pointer hover_underline"
+                data-bs-dismiss="offcanvas">
+                My Orders
+              </p>
+            </Link>
+
             <hr className="mb-0" />
             <Link href={"/profile"}>
               <p
