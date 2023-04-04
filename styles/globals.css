@@ -14,6 +14,10 @@ p {
   margin: 0px !important;
 }
 
+.fz-12 {
+  font-size: 12px !important;
+}
+
 .global_black_button {
   background-color: black;
   color: white;
@@ -98,6 +102,10 @@ input::placeholder {
 
 .color-black {
   color: black !important;
+}
+
+.bg-grey {
+  background-color: #f8f9fa;
 }
 
 .news_letter_wrapper {
