@@ -3,7 +3,7 @@ import ProductItem from "../components/ProductItem";
 import { BiSortUp, BiSortDown } from "react-icons/bi";
 import Customization from "../components/exclusive/Customization";
 
-export default function shop() {
+export default function Shop() {
   const [sort, setSort] = useState("expensive");
 
   const selectExpensive = () => {

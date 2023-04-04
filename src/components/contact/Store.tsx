@@ -17,13 +17,14 @@ export default function Store() {
                 objectFit="scale-down"
                 height={400}
                 width={400}
+                alt="img"
               />
               <div className="text-center p-0">
                 <p className="h5 fw-bold m-0">{store.email}</p>
                 <p className=" ">{store.phone}</p>
                 <a
                   target="_blank"
-                  rel="noopener"
+                  rel=" noreferrer noopener"
                   href="https://lokendra-portfolio.vercel.app"
                   className="text_black">
                   <p>{store.address}</p>

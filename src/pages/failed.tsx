@@ -26,7 +26,6 @@ function OrderFailure() {
                 strokeWidth="13"
                 fill="none"
                 strokeLinecap="round"
-                stroke-linejoin="round"
               />
             </svg>
           </div>
@@ -38,7 +37,7 @@ function OrderFailure() {
             Your order has been placed but payment is failed due to unknown reason.<br></br> Please contact to Brocade for further detail.
           </h5>
           <Link href="/">
-            <a style={{ textDecoration: "none", color: "black" }}>Back to home</a>
+            <a className="text-decoration-none ">Back to home</a>
           </Link>
         </div>
       </div>

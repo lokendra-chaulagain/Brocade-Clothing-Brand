@@ -21,6 +21,7 @@ export default function Profile() {
             src={image}
             height={100}
             width={100}
+            alt="img"
           />
 
           <div className="col-12 col-sm-6 mt-3 mt-sm-0">

@@ -11,11 +11,11 @@ export default function ProductItem() {
           <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 card-group ">
             <div className=" card border-0 mb-4 hover_underline no_selection ">
               <Image
-                className=""
                 src={product.image}
                 objectFit="scale-down"
                 height={500}
                 width={500}
+                alt="img"
               />
 
               <Link href={"/product/bomber-jacket-premium-original-brocade"}>

@@ -12,6 +12,7 @@ export default function FooterRightSide() {
         <a
           href={"https://lokendra-portfolio.vercel.app"}
           target="_blank"
+          rel=" noreferrer noopener"
           className="cursor-pointer">
           {" "}
           <FaFacebookSquare className="cursor-pointer color-black" />
@@ -20,6 +21,7 @@ export default function FooterRightSide() {
         <a
           href={"https://lokendra-portfolio.vercel.app"}
           target="_blank"
+          rel=" noreferrer noopener"
           className="cursor-pointer ">
           {" "}
           <AiOutlineInstagram className="cursor-pointer color-black" />
@@ -27,14 +29,16 @@ export default function FooterRightSide() {
 
         <a
           href={"https://lokendra-portfolio.vercel.app"}
-          target="_blank">
+          target="_blank"
+          rel=" noreferrer noopener">
           {" "}
           <FaTiktok className="cursor-pointer color-black" />
         </a>
 
         <a
           href={"https://lokendra-portfolio.vercel.app"}
-          target="_blank">
+          target="_blank"
+          rel=" noreferrer noopener">
           {" "}
           <ImYoutube className="cursor-pointer color-black" />
         </a>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
-const register = () => {
+const Register = () => {
   const {
     register,
     handleSubmit,
@@ -131,4 +131,4 @@ const register = () => {
   );
 };
 
-export default register;
+export default Register;

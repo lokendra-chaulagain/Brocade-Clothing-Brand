@@ -12,7 +12,7 @@ export default function TermConditions() {
 
       <div>
         <p className="h5">Personal Data</p>
-        <p>While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:</p>
+        <p>While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you Personal Data. Personally identifiable information may include, but is not limited to:</p>
         <ul className=" ">
           <li>
             <p className="h6 ">Email address</p>
@@ -28,7 +28,7 @@ export default function TermConditions() {
 
       <div>
         <p className="h5">Usage Data</p>
-        <p>We may also collect information how the Service is accessed and used ("Usage Data"). This Usage Data may include information such as your computers Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+        <p>We may also collect information how the Service is accessed and used Usage Data. This Usage Data may include information such as your computers Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
       </div>
 
       <div>

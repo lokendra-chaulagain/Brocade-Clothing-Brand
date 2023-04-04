@@ -6,7 +6,7 @@ export default function PrivacyPolicy() {
       <div>
         <p className=" h1 fw-bold pt-5">PRIVACY POLICY</p>
         <p className="p">
-          This Privacy Policy is made for both parties (We) and (Our Visitors) to understand, follow and maintain the boundaries of the service provider – service receiver relationship. This Privacy Policy governs the manner in which Brocade Nepal collects, uses, maintains, and discloses information collected from users (each, a "User") of the Brocadenepal.com website ("Site"). This privacy policy applies to the Site and all products and services offered by Brocade Nepal.
+          This Privacy Policy is made for both parties (We) and (Our Visitors) to understand, follow and maintain the boundaries of the service provider – service receiver relationship. This Privacy Policy governs the manner in which Brocade Nepal collects, uses, maintains, and discloses information collected from users each, a User of the Brocadenepal.com website Site. This privacy policy applies to the Site and all products and services offered by Brocade Nepal.
         </p>
       </div>
 
@@ -35,7 +35,7 @@ export default function PrivacyPolicy() {
 
       <div>
         <p className="h4">Web bser cookies</p>
-        <p>Our Site may use "cookies" to enhance the User experience. User's web bser places cookies on their hard drive for record-keeping purposes and sometimes to track information about them. Users may choose to set their web bser to refuse cookies or to alert you when cookies are being sent. If they do so, note that some parts of the Site may not function properly. </p>
+        <p>Our Site may use cookies to enhance the User experience. Users web bser places cookies on their hard drive for record-keeping purposes and sometimes to track information about them. Users may choose to set their web bser to refuse cookies or to alert you when cookies are being sent. If they do so, note that some parts of the Site may not function properly. </p>
       </div>
 
       <div>

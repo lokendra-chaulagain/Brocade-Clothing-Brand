@@ -6,13 +6,13 @@ export default function about() {
       <div>
         <p className=" h1 fw-bold pt-5">ABOUT US.</p>
         <p>
-          Brocade is a Nepali clothing fashion brand that aims to bring the essence of Nepali culture and tradition to its fashion line. The brand is committed to preserving the rich heritage of Nepali clothing and textiles while infusing contemporary designs to cater to the modern fashion sensibilities of its customers. Brocade's clothing line is inspired by the vibrant colors and intricate patterns that are characteristic of Nepali textiles. Each garment is crafted with precision and care,
+          Brocade is a Nepali clothing fashion brand that aims to bring the essence of Nepali culture and tradition to its fashion line. The brand is committed to preserving the rich heritage of Nepali clothing and textiles while infusing contemporary designs to cater to the modern fashion sensibilities of its customers. Brocade clothing line is inspired by the vibrant colors and intricate patterns that are characteristic of Nepali textiles. Each garment is crafted with precision and care,
           using high-quality materials that ensure both durability and comfort. From traditional sarees and kurtas to modern fusion wear, Brocade offers a diverse range of clothing options that cater to every occasion.
           <br />
           <br />
           With a deep-rooted commitment to sustainability, Brocade sources its materials from local artisans and weavers, supporting the traditional craft community of Nepal. The brand also incorporates eco-friendly practices into its production process, ensuring that its products have a minimal environmental impact.
           <br />
-          Brocade's mission is to promote the rich Nepali textile heritage and make it accessible to the global community. By offering a unique blend of traditional and modern designs, the brand aims to create a fashion identity that is both timeless and contemporary.
+          Brocade mission is to promote the rich Nepali textile heritage and make it accessible to the global community. By offering a unique blend of traditional and modern designs, the brand aims to create a fashion identity that is both timeless and contemporary.
         </p>
       </div>
 

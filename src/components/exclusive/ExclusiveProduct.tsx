@@ -18,6 +18,7 @@ export default function ExclusiveProduct() {
             height={500}
             width={500}
             objectFit="scale-down"
+            alt="img"
           />
         </div>
 
@@ -47,6 +48,7 @@ export default function ExclusiveProduct() {
             height={500}
             width={500}
             objectFit="scale-down"
+            alt="img"
           />
         </div>
 
@@ -57,6 +59,7 @@ export default function ExclusiveProduct() {
             height={500}
             width={500}
             objectFit="scale-down"
+            alt="img"
           />
         </div>
 
@@ -67,6 +70,7 @@ export default function ExclusiveProduct() {
             height={500}
             width={500}
             objectFit="scale-down"
+            alt="img"
           />
         </div>
       </div>

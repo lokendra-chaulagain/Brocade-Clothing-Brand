@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import RegisterSuggest from "../components/account/RegisterSuggest";
 
-export default function login() {
+export default function Login() {
   const loginSuccess = () => toast.success("Login Success");
 
   const {

@@ -18,6 +18,7 @@ const SingleBlog = () => {
             width={1000}
             layout="responsive"
             objectFit="cover"
+            alt="img"
           />
         </div>
 
