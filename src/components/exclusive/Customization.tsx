@@ -31,13 +31,13 @@ const Customization = () => {
   const product3 = products[2];
 
   return (
-    <div className="container mb-5">
-      <div className={`${style.wrapper} row row-cols-1 row-cols-md-2 row-cols-lg-2 d-sm-flex justify-content-center`}>
+    <div className="container pt-4 pt-lg-0 mb-5">
+      <div className=" row d-flex align-items-center pt-5 pt-lg-0 ">
         <motion.div
+          className="col-12 col-md-6"
           initial="imgScreen"
           whileInView="onscreen"
-          viewport={{ once: false, amount: 0.1 }}
-          className="col">
+          viewport={{ once: false, amount: 0.1 }}>
           <motion.div
             variants={itemVariants}
             className={`d-flex justify-content-center`}>
@@ -52,17 +52,17 @@ const Customization = () => {
         </motion.div>
 
         <motion.div
-          className="col mt-0 mt-md-5 pt-0 pt-md-5"
+          className="col "
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: false, amount: 0.5 }}>
           <motion.h1
             variants={itemVariants}
-            className={style.h1}>
-            Speed Demons- Brown
+            className={`${style.h1} text-md-center text-lg-start`}>
+            Speed Demons- White
           </motion.h1>
-          <motion.p variants={itemVariants}>Speed Demons wearing brown jackets are a tight-knit community of speed enthusiasts who live for the rush of the open road. With a passion for high-performance vehicles, they push themselves and their machines to the limit, weaving through traffic and leaving a trail of excitement and awe in their wake.</motion.p>
-          <Link href={"/product/speed-demon-brown"}>
+          <motion.p variants={itemVariants}>Speed Demons wearing white jackets are a tight-knit community of speed enthusiasts who live for the rush of the open road. With a passion for high-performance vehicles, they push themselves and their machines to the limit, weaving through traffic and leaving a trail of excitement and awe in their wake.</motion.p>
+          <Link href={"/product/speed-demon-white"}>
             <motion.button
               variants={itemVariants}
               className="global_black_button px-5 mt-2">
@@ -72,33 +72,15 @@ const Customization = () => {
         </motion.div>
       </div>
 
-      <div className={`${style.wrapper} row row-cols-1 row-cols-md-2 row-cols-lg-2 d-sm-flex justify-content-center`}>
+      <div className=" row d-flex align-items-center pt-5 pt-lg-0 ">
         <motion.div
-          initial="imgScreen"
-          whileInView="onscreen"
-          viewport={{ once: false, amount: 0.5 }}
-          className="order-md-2 col-12">
-          <motion.div
-            variants={itemVariants}
-            className={` d-flex justify-content-center`}>
-            <Image
-              src={product2.image}
-              objectFit="scale-down"
-              alt="exclusive"
-              height={600}
-              width={600}
-            />
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          className="col mt-0 mt-md-5 pt-0 pt-md-5 order-md-1"
+          className="col order-0"
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: false, amount: 0.5 }}>
           <motion.h1
             variants={itemVariants}
-            className={style.h1}>
+            className={`${style.h1} text-md-center text-lg-start`}>
             Speed Demons - Green
           </motion.h1>
           <motion.p variants={itemVariants}>Speed Demons sporting green jackets are a group of high-octane thrill-seekers who live for the adrenaline rush of fast cars and motorcycles. With a fierce determination and a love for speed, they race through the streets, their engines roaring, leaving a trail of awe and excitement behind them.</motion.p>
@@ -110,17 +92,35 @@ const Customization = () => {
             </motion.button>
           </Link>
         </motion.div>
-      </div>
 
-      <div className={`${style.wrapper} row row-cols-1 row-cols-md-2 row-cols-lg-2 d-sm-flex justify-content-center`}>
         <motion.div
+          className="col-12 col-md-6 order-1 "
           initial="imgScreen"
           whileInView="onscreen"
-          viewport={{ once: false, amount: 0.5 }}
-          className="col-12">
+          viewport={{ once: false, amount: 0.1 }}>
           <motion.div
             variants={itemVariants}
-            className={` d-flex justify-content-center`}>
+            className={`d-flex justify-content-center`}>
+            <Image
+              src={product2.image}
+              objectFit="scale-down"
+              alt="exclusive"
+              height={600}
+              width={600}
+            />
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* <div className=" row d-flex align-items-center pt-5 pt-lg-0 ">
+        <motion.div
+          className="col-12 col-md-6"
+          initial="imgScreen"
+          whileInView="onscreen"
+          viewport={{ once: false, amount: 0.1 }}>
+          <motion.div
+            variants={itemVariants}
+            className={`d-flex justify-content-center`}>
             <Image
               src={product3.image}
               objectFit="scale-down"
@@ -132,13 +132,13 @@ const Customization = () => {
         </motion.div>
 
         <motion.div
-          className="col mt-0 mt-md-5 pt-0 pt-md-5"
+          className="col "
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: false, amount: 0.5 }}>
           <motion.h1
             variants={itemVariants}
-            className={style.h1}>
+            className={`${style.h1} text-md-center text-lg-start`}>
             Speed Demons - Red
           </motion.h1>
           <motion.p variants={itemVariants}>Speed Demons decked out in red jackets are a bold and fearless crew of speed freaks who live for the thrill of the race. With their high-performance vehicles revving, they tear up the roads with reckless abandon, pushing themselves to the limit and leaving a trail of excitement and danger in their wake.</motion.p>
@@ -150,7 +150,7 @@ const Customization = () => {
             </motion.button>
           </Link>
         </motion.div>
-      </div>
+      </div> */}
     </div>
   );
 };

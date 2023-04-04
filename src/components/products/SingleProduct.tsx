@@ -28,8 +28,8 @@ const SingleProduct = () => {
 
   return (
     <>
-      <div className="row">
-        <div className="col-6">
+      <div className="row mb-5">
+        <div className="col-12 col-lg-6">
           <Swiper
             loop={true}
             navigation={true}
@@ -44,26 +44,26 @@ const SingleProduct = () => {
                   src={product.image}
                   alt="img"
                   objectFit="scale-down"
-                  height={1000}
-                  width={1000}
+                  height={600}
+                  width={600}
                 />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
 
-        <div className="col-6">
-          <p className="h1">Bomber Jacket</p>
+        <div className="col-12 col-lg-6 pt-0 pt-lg-5">
+          <p className="h1 ">Bomber Jacket</p>
           <p> Stylish and versatile jacket that is typically short in length, with a front zip closure</p>
 
           <div className="d-flex align-items-center gap-3">
             <p className="h5">Colors : </p>
             <div className="color d-flex gap-3 my-3">
-              <p className="p-2 cp bg-secondary"></p>
-              <p className="p-2 cp bg-primary"></p>
-              <p className="p-2 cp bg-danger"></p>
-              <p className="p-2 cp bg-warning"></p>
-              <p className="p-2 cp bg-black"></p>
+              <p className="p-2 cp  bg-secondary"></p>
+              <p className="p-2 cp  bg-primary"></p>
+              <p className="p-2 cp  bg-danger"></p>
+              <p className="p-2 cp  bg-warning"></p>
+              <p className="p-2 cp  bg-black"></p>
             </div>
           </div>
 

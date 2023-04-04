@@ -5,7 +5,6 @@ import Footer from "../components/Footer";
 import NavBar from "../components/navBar/NavBar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import NewsLetter from "../components/NewsLetter";
 
 function MyApp({ Component, pageProps }: any) {
   useEffect(() => {
@@ -18,7 +17,6 @@ function MyApp({ Component, pageProps }: any) {
       <div className="bodyWrapper">
         <Component {...pageProps} />
       </div>
-      {/* <NewsLetter /> */}
       <div className="footerWrapper">
         <Footer />
       </div>

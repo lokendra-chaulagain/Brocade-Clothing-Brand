@@ -1,0 +1,55 @@
+[
+    {
+        "name": "Speed Demons-Black",
+        "price": 3200,
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680400219/Brocade/Banner/banner-1_wj4hvl.webp"
+    },
+   
+    {
+        "name": "Speed Demons-Green",
+        "price": 3700,
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680400219/Brocade/Banner/banner-2_vaeugg.webp"
+    },
+    {
+        "name": "Speed Demons-Yellow",
+        "price": 3100,
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680400219/Brocade/Banner/banner-4_bytscg.webp"
+    },
+   
+    {
+        "name": "Speed Demons-Orange",
+        "price": 3400,
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680598473/Brocade/Banner/orange_oynwkk.webp"
+    },
+    {
+        "name": "Speed Demons-White",
+        "price": 3000,
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680400219/Brocade/Banner/banner-6_yiagas.webp"
+    },
+    {
+        "name": "Speed Demons-Orange 2.0",
+        "price": 3900,
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680598574/Brocade/Banner/orange-white_dsne8f.webp"
+    },
+    
+    {
+        "name": "Speed Demons-Brown",
+        "price": 3500,
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680400219/Brocade/Banner/banner-5_ytkrfe.webp"
+    },
+
+    {
+        "name": "Speed Demons-Blue",
+        "price": 3800,
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680598481/Brocade/Banner/blue_retnyr.webp"
+    },
+   
+
+    {
+        "name": "Speed Demons-Red",
+        "price": 3900,
+        "image": "https://res.cloudinary.com/dyof6o0ul/image/upload/v1680400219/Brocade/Banner/banner-3_icz62r.webp"
+    }
+
+
+]

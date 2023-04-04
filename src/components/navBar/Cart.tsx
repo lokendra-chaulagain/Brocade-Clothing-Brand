@@ -20,7 +20,7 @@ const Cart = () => {
         <span className="">
           <BsCartDash
             color="white"
-            size={30}
+            size={24}
           />{" "}
         </span>
       </button>

@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
-export default function UpdateProfileInfo() {
+export default function BookModal() {
   const {
     register,
     handleSubmit,
@@ -14,7 +14,7 @@ export default function UpdateProfileInfo() {
 
   const updatePasswordHandler = () => {
     console.log(handleAllField);
-    toast.success("Update Success");
+    toast.success("Successfully Booked");
     reset();
   };
 
@@ -22,23 +22,23 @@ export default function UpdateProfileInfo() {
     <div>
       <button
         type="button"
-        className="global_black_button py-1 rounded-1"
+        className="global_black_button py-1 rounded-0"
         data-bs-toggle="modal"
-        data-bs-target="#exampleModal">
-        Edit Profile
+        data-bs-target="#bookModal">
+        Book Now
       </button>
 
       <div
         className="modal fade"
-        id="exampleModal"
-        aria-labelledby="exampleModalLabel"
+        id="bookModal"
+        aria-labelledby="bookModalLabel"
         aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-body">
               <form onSubmit={handleSubmit(updatePasswordHandler)}>
                 <div className="mb-3">
-                  <h5 className="text-muted text-center mb-3 text-uppercase">Update Your Information</h5>
+                  <h5 className="text-muted text-center mb-3 text-uppercase">Book The Lunching Product</h5>
 
                   <input
                     type="name"
@@ -73,14 +73,14 @@ export default function UpdateProfileInfo() {
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label">Profile Picture</label>
                   <input
-                    className="form-control"
-                    type="file"
-                    id="file"
-                    {...register("file", { required: true })}
+                    type="number"
+                    className="form-control rounded-0 "
+                    placeholder="Quantity"
+                    id="quantity"
+                    {...register("quantity", { required: true })}
                   />
-                  {errors.file && <span className="text-danger">This field is required</span>}
+                  {errors.quantity && <span className="text-danger">This field is required</span>}
                 </div>
 
                 <div className="d-flex gap-1">
@@ -95,7 +95,7 @@ export default function UpdateProfileInfo() {
                   <button
                     type="submit"
                     className="global_black_button flex-fill">
-                    Update
+                    Confirm
                   </button>
                 </div>
               </form>

@@ -538,3 +538,14 @@ input::placeholder {
 .color_white{
   color: whitesmoke;
 }
+
+/* .hover_underline{
+  transition: all .3s ease-in-out !important;
+
+} */
+
+.hover_underline:hover{
+  text-decoration: underline !important;
+  font-weight:  200 !important;
+
+}

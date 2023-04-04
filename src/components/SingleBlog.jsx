@@ -7,7 +7,7 @@ const SingleBlog = () => {
   return (
     <div className="">
       <div className="row">
-        <p className="h1 text-center">{blog.title}</p>
+        <p className="h1 text-center mt-3 mt-sm-0">{blog.title}</p>
         <small className="d-flex justify-content-end px-5 ">8 days ago</small>
 
         <div className="image my-3">

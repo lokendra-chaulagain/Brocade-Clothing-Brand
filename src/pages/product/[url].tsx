@@ -5,12 +5,15 @@ import React from "react";
 const productId = () => {
   return (
     <>
-      <div className="container paddingTop">
+      <div className="container pt-5 pt-md-0 pt-lg-5">
         <SingleProduct />
       </div>
+     
+     <div className="container">
+     <p className="fw-bolder h2  ">YOU MAY ALSO LIKE</p>
+     </div>
 
       <div className="container-fluid ">
-        <p className="fw-bolder h2 text-center">YOU MAY ALSO LIKE</p>
         <ProductItem />
       </div>
     </>

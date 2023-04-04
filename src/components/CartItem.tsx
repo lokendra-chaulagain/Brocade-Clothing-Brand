@@ -10,23 +10,23 @@ export default function CartItem() {
   };
 
   return (
-    <div className="card border-0 mb-3">
-      <div className="row">
-        <div className="col-4">
+    <div className="card border-0 mb-3 ">
+      <div className="row border pe-2">
+        <div className="col-4 ">
           <Image
             src={demo}
-            width={100}
-            height="100%"
-            objectFit="cover"
+            width={80}
+            height={80}
+            objectFit="scale-down"
             alt="img"
           />
         </div>
         <div className="col-7 ps-0">
           <div className="card-body p-2">
-            <h5 className="card-title mb-0">Bomber Jacket</h5>
+            <p className="card-title mb-0">Bomber Jacket</p>
             <div className="details f-flex flex-column">
               <div className="qty d-flex gap-3 align-items-center">
-                <small className="text-muted p-0">Qty</small>
+                <p className="text-muted small p-0">Qty</p>
                 <button
                   type="button"
                   className="ghostBtn p-0">
@@ -41,9 +41,9 @@ export default function CartItem() {
                   +
                 </button>
               </div>
-              <div className="price d-flex gap-3">
-                <small className="text-muted p-0">Price</small>
-                <span className="p-0">7447</span>
+              <div className="price d-flex gap-3 small">
+                <p className="text-muted p-0">Price</p>
+                <p className="p-0">7447</p>
               </div>
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function CartItem() {
           <AiOutlineDelete
             className="cp"
             onClick={handleItemRemove}
-            size={24}
+            size={18}
             color="red"
           />
         </div>

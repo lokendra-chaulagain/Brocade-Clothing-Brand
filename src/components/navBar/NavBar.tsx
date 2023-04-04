@@ -6,16 +6,31 @@ import UserHead from "./UserHead";
 
 const NavBar = () => {
   return (
-    <nav className="navbar bg-black position-fixed w-100 py-4 z_999">
+    <nav className="navbar bg-black position-fixed w-100 py-3 z_999">
       <div className="container">
         <Link href="/">
           <p className="h2 text-white cp">Brocade</p>
         </Link>
-        <div className="d-flex gap-4 align-items-center">
+        <div className="d-flex gap-4 align-items-center ">
+          <Link href={"/custom"}>
+            <p className="h6 color_white cursor-pointer d-none d-sm-block">Customization</p>
+          </Link>
+
+          <Link href={"/lunching"}>
+            <p className="h6 color_white cursor-pointer d-none d-sm-block">Booking</p>
+          </Link>
+
+          <Link href={"/exclusive"}>
+            <p className="h6 color_white cursor-pointer d-none d-sm-block">Exclusive</p>
+          </Link>
+
+          <Link href={"/shop"}>
+            <p className="h6 color_white cursor-pointer d-none d-sm-block">Shop</p>
+          </Link>
+
           <div className="d-flex flex-row focus-false">
             <Cart />
           </div>
-
           <UserHead />
           <RightMenu />
         </div>

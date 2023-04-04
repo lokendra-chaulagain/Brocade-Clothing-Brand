@@ -139,26 +139,52 @@ const Footer = () => {
           {/* =============== */}
           <ul className="d-flex p-0 align-items-center custom-fs-11 gap-2">
             <li>
+              <Link href="/customization">
+                <a className="text-dark text-decoration-none">Customization</a>
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/exclusive">
+                <a className="text-dark text-decoration-none">Exclusive</a>
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/shop">
+                <a className="text-dark text-decoration-none">Shop</a>
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/login">
+                <a className="text-dark text-decoration-none">Login</a>
+              </Link>
+            </li>
+          </ul>
+
+          <ul className="d-flex p-0 align-items-center custom-fs-11 gap-2">
+            <li>
               <Link href="/aboutus">
-                <a className="text-dark text-decoration-none">ABOUT</a>
+                <a className="text-dark text-decoration-none">About</a>
               </Link>
             </li>
 
             <li>
               <Link href="/contact">
-                <a className="text-dark text-decoration-none">CONTACT</a>
+                <a className="text-dark text-decoration-none">Contact</a>
               </Link>
             </li>
 
             <li>
               <Link href="/privacy-policy">
-                <a className="text-dark text-decoration-none">POLICY</a>
+                <a className="text-dark text-decoration-none">Policy</a>
               </Link>
             </li>
 
             <li>
               <Link href="/terms-conditions">
-                <a className="text-dark text-decoration-none">TERMS</a>
+                <a className="text-dark text-decoration-none">Terms</a>
               </Link>
             </li>
           </ul>

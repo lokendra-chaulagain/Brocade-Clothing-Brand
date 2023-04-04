@@ -18,7 +18,7 @@ export default function RightMenu() {
         <span className="">
           <TbMenu
             color="white"
-            size={30}
+            size={25}
           />{" "}
         </span>
       </button>
@@ -67,6 +67,22 @@ export default function RightMenu() {
               </p>
             </Link>
 
+            <Link href={"/custom"}>
+              <p
+                className="cp"
+                data-bs-dismiss="offcanvas">
+                Customization
+              </p>
+            </Link>
+
+            <Link href={"/lunching"}>
+              <p
+                className="cp"
+                data-bs-dismiss="offcanvas">
+                Lunching Soon
+              </p>
+            </Link>
+
             <Link href={"/contact"}>
               <p
                 className="cp"
@@ -82,7 +98,6 @@ export default function RightMenu() {
                 Blog
               </p>
             </Link>
-
 
             <Link href={"/about"}>
               <p

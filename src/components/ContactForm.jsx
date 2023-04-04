@@ -15,7 +15,7 @@ const ContactForm = () => {
   return (
     <>
       <div className="container my-5">
-        <div className="row ">
+        <div className="row  ">
           <form
             className="col-12 d-flex flex-column order-first order-md-last"
             onSubmit={handleSubmit(handleSend)}>

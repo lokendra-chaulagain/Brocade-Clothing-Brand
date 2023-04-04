@@ -4,13 +4,13 @@ import { BsPersonCircle } from "react-icons/bs";
 
 export default function UserHead() {
   return (
-    <div className="dropdown">
+    <div className="dropdown d-none d-sm-block">
       <BsPersonCircle
         className="dropdown-toggle cp"
         data-bs-toggle="dropdown"
         aria-expanded="false"
         color="white"
-        size={25}
+        size={22}
       />
       <ul className="dropdown-menu mt-3 rounded-0">
         <li>
