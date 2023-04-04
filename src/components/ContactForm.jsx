@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import Store from "./contact/Store";
+import React from "react";
 import { useForm } from "react-hook-form";
-import Api from "../services/Api.js";
 
 const ContactForm = () => {
   const {
