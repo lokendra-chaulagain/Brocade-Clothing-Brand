@@ -26,7 +26,7 @@ export default function ExclusiveProduct() {
           <div className="mt-5">
             <p className="h2 mb-2">Res Jump Suit Jacket</p>
             <p>
-              Res Jump Suit jacket is a classic and stylish piece of outerwear that has been popular for decades. It is a versatile garment that can be worn in a variety of settings, from casual outings to more formal occasions. Bomber jackets were originally designed for pilots during World War II, and they have since become a staple of men's fashion.Men's bomber jackets are suitable for all seasons, making them a great investment for any wardrobe. They are perfect for layering over a t-shirt
+              Res Jump Suit jacket is a classic and stylish piece of outerwear that has been popular for decades. It is a versatile garment that can be worn in a variety of settings, from casual outings to more formal occasions. Bomber jackets were originally designed for pilots during World War II, and they have since become a staple of mens fashion.Mens bomber jackets are suitable for all seasons, making them a great investment for any wardrobe. They are perfect for layering over a t-shirt
               or sweater in the cooler months or for wearing on their own during the warmer months.
             </p>
             <Link href={"/product/exclusive-bomber-jacket-premium-original-brocade"}>
