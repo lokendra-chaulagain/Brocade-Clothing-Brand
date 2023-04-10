@@ -1,8 +1,11 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import { useCreateSubscriberMutation } from "../redux/api/globalApi";
 
 export default function NewsLetterModal() {
+  const [createSubscriber] = useCreateSubscriberMutation();
+
   const {
     register,
     watch,
@@ -12,9 +15,9 @@ export default function NewsLetterModal() {
   } = useForm();
   const handleAllField = watch();
 
-  const handleSubscribe = () => {
+  const handleSubscribe = (handleAllField: any) => {
+    createSubscriber(handleAllField);
     toast.success("Subscribe Success");
-    console.log(handleAllField);
     reset();
   };
 
@@ -39,14 +42,13 @@ export default function NewsLetterModal() {
                 <div className="mb-3">
                   <label className="col-form-label text-muted text-center">GET NOTIFIED ABOUT NEW PRODUCT ARRIVALS AND EARLY RELEASE INFO</label>
                   <input
-                    {...register("email", {
-                      required: "Email is required field",
-                    })}
                     type="email"
+                    id="email"
                     className="form-control rounded-0 mb-3"
                     placeholder="example@email.com"
-                    name="email"
+                    {...register("email", { required: true })}
                   />
+                  {errors.email && <span>This field is required</span>}
                 </div>
                 <div className="d-flex gap-1">
                   <button

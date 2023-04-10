@@ -3,8 +3,11 @@ import { Grid, Dialog, Button } from "@mui/material";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { MiscellaneousContext } from "../../../context/MiscellaneousContext";
+import { useCreateColorMutation, useGetAllColorQuery } from "../../../redux/api/globalApi";
 
 export default function AddColorDialog({ setIsUpdated }: any) {
+  const [createColor] = useCreateColorMutation();
+ 
   const { createSuccess, somethingWentWrong } = useContext(MiscellaneousContext);
   const [open, setOpen] = useState(false);
   const handleClickOpen = () => {
@@ -23,18 +26,14 @@ export default function AddColorDialog({ setIsUpdated }: any) {
   } = useForm();
   const handleAllField = watch();
 
-  const createColor = async () => {
+  const handleCreateColor = async (handleAllField: any) => {
     try {
-      const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/color`, handleAllField);
-      
-      setIsUpdated(5);
+      createColor(handleAllField);
       handleClose();
       createSuccess();
       reset();
-      console.log("Form has been submitted");
     } catch (error) {
       console.log(error);
-      somethingWentWrong();
     }
   };
 
@@ -55,7 +54,7 @@ export default function AddColorDialog({ setIsUpdated }: any) {
         open={open}
         onClose={handleClose}>
         <form
-          onSubmit={handleSubmit(createColor)}
+          onSubmit={handleSubmit(handleCreateColor)}
           className="customCard p-3 overflow_hidden">
           <h4>Create New Colors </h4>
           <p className="customPrimaryTxtColor">To subscribe to this website, please enter your email address here. We will send updates occasionally.</p>
@@ -63,16 +62,16 @@ export default function AddColorDialog({ setIsUpdated }: any) {
           <div className="row ">
             <div className="col">
               <label
-                htmlFor="name"
+                htmlFor="color"
                 className="form-label p_zero_first_cap mt-2 h6 ">
                 Colors Name
               </label>
               <input
                 className=" input_field_style form-control form-control-lg px-2  border-0  rounded-0"
-                {...register("name", { required: "Required field" })}
-                placeholder="name"
+                {...register("color", { required: "Required field" })}
+                placeholder="Color"
               />
-              {errors.name && <p className="form_hook_error">{`${errors.name.message}`}</p>}
+              {errors.color && <p className="form_hook_error">{`${errors.color.message}`}</p>}
             </div>
           </div>
 

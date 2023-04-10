@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const colorSchema = new mongoose.Schema({
-  name: {
+  color: {
     type: String,
   },
 });

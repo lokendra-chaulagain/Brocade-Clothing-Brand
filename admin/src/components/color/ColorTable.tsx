@@ -2,8 +2,20 @@ import React from "react";
 import TableHeading from "../TableHeading";
 import AddColorDialog from "./AddColorDialog";
 import { MdDelete } from "react-icons/md";
+import { useDeleteColorMutation, useGetAllColorQuery } from "../../../redux/api/globalApi";
 
-export default function ColorTable({ deleteColor, colors, setIsUpdated }: any) {
+export default function ColorTable({ setIsUpdated }: any) {
+  const { data: colors } = useGetAllColorQuery();
+  const [deleteColor] = useDeleteColorMutation();
+
+  const handleDeleteColor = (id: any) => {
+    try {
+      deleteColor(id);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <div className="d-flex align-items-center  ">
@@ -27,12 +39,12 @@ export default function ColorTable({ deleteColor, colors, setIsUpdated }: any) {
                   key={index}
                   className="customPrimaryTxtColor custom_table_hover ">
                   <th scope="row">{index + 1}</th>
-                  <td>{color.name}</td>
+                  <td>{color.color}</td>
 
                   <td>
                     <MdDelete
                       className="delete_button_icon"
-                      onClick={() => deleteColor(color._id)}
+                      onClick={() => handleDeleteColor(color._id)}
                       aria-label="delete"
                     />
                   </td>

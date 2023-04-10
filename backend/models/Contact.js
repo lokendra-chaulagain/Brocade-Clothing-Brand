@@ -21,14 +21,6 @@ const contactSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-
-    resume: {
-      type: String,
-    },
-
-    jobPostId: {
-      type: String,
-    },
   },
   { timestamps: true }
 );
