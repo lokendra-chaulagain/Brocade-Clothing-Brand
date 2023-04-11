@@ -1,7 +1,7 @@
 import Banner from "../models/Banner.js";
 import createError from "../utils/error.js";
 import multer from "multer";
-import cloudinary from "cloudinary";
+import { v2 as cloudinary } from "cloudinary";
 
 // Configure Cloudinary with  credentials
 cloudinary.config({
@@ -17,7 +17,12 @@ const createBanner = async (req, res, next) => {
 
     // Upload each file to Cloudinary and get the URL
     for (const file of files) {
-      const result = await cloudinary.uploader.upload(file.path);
+      // const result = await cloudinary.uploader.upload(file.path, { folder: "brocade-uploads/banners" });
+
+      const currentDateTime = new Date().toISOString().replace(/[-:.]/g, ""); // Get current date and time
+      const publicId = `brocade-uploads/banners/${currentDateTime}_${file.originalname}`; // Create unique public_id
+      const result = await cloudinary.uploader.upload(file.path, { public_id: publicId });
+      // images.push(result.secure_url);
       images.push(result.secure_url);
     }
 
@@ -41,10 +46,37 @@ const updateBanner = async (req, res, next) => {
   }
 };
 
+// const deleteBanner = async (req, res, next) => {
+//   try {
+//     const deletedService = await Banner.findByIdAndDelete(req.params.id);
+//     res.status(200).json(deletedService);
+//   } catch (error) {
+//     return next(createError(500, "Something went wrong"));
+//   }
+// };
+
 const deleteBanner = async (req, res, next) => {
   try {
-    const deletedService = await Banner.findByIdAndDelete(req.params.id);
-    res.status(200).json(deletedService);
+    const bannerId = req.params.id;
+    // Find the banner document in MongoDB
+    const banner = await Banner.findById(bannerId);
+    if (!banner) {
+      return next(createError(404, "Banner not found"));
+    }
+
+    console.log(banner.images)
+
+    // Delete the images from Cloudinary
+    // for (const eachUrl of banner.images) {
+    //   const publicId = eachUrl.split("/").slice(-1)[0].split(".")[0];
+    //   // Delete the image from Cloudinary
+    //   await cloudinary.uploader.destroy("tuapnvztwug4ywtjbwdx");
+    //   // console.log(publicId)
+    // }
+    
+    // Delete the banner document from MongoDB
+    await Banner.findByIdAndDelete(bannerId);
+    res.status(200).json({ message: "Banner deleted successfully" });
   } catch (error) {
     return next(createError(500, "Something went wrong"));
   }
@@ -81,6 +113,7 @@ const getAllBanner = async (req, res, next) => {
       totalBannerCount,
       allBanner,
     });
+    
   } catch (error) {
     return next(createError(500, "Something went wrong"));
   }

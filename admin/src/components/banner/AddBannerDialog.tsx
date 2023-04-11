@@ -5,9 +5,14 @@ import { MiscellaneousContext } from "../../../context/MiscellaneousContext";
 import { useCreateBannerMutation } from "../../../redux/api/globalApi";
 import { toast } from "react-toastify";
 import axios from "axios";
+import CustomSpinner from "../CustomSpinner";
 
 export default function AddBannerDialog() {
-  const [createBanner] = useCreateBannerMutation();
+  const [createBanner, createBannerResult] = useCreateBannerMutation();
+  const { isLoading, isSuccess, isError, data, error, status } = createBannerResult;
+  console.log(createBannerResult);
+  const notify = () => toast("Wow so easy!");
+
   const { handleClickOpen, handleClose, open } = useContext(MiscellaneousContext);
 
   const {
@@ -22,8 +27,6 @@ export default function AddBannerDialog() {
   const [images, setImages] = useState([]);
 
   const handleImageUpload = async (e: any) => {
-    console.log(allFields);
-
     const formData = new FormData();
     formData.append("title", allFields.title);
     formData.append("description", allFields.description);
@@ -34,14 +37,16 @@ export default function AddBannerDialog() {
     }
 
     try {
-      const response = await axios.post("http://localhost:12002/api/banner", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      // const response = await axios.post("http://localhost:12002/api/banner", formData, {
+      //   headers: {
+      //     "Content-Type": "multipart/form-data",
+      //   },
+      // });
 
-      console.log(response.data);
-      setImages(response.data.urls);
+      createBanner(formData);
+
+      // setImages(response.data.urls);
+      reset();
     } catch (error) {
       console.error(error);
     }
@@ -68,6 +73,10 @@ export default function AddBannerDialog() {
           className="customCard p-3 overflow_hidden">
           <h4>Create New Banner </h4>
           <p className="customPrimaryTxtColor">To subscribe to this website, please enter your email address here. We will send updates occasionally.</p>
+
+          {isLoading && <h5 className="text-primary">Uploading...</h5>}
+          {isSuccess && <h5 className="text-success">Upload Success</h5>}
+          {isError && <h5 className="text-danger">Upload Failure</h5>}
 
           <div className="row">
             <label
@@ -121,11 +130,16 @@ export default function AddBannerDialog() {
               onClick={handleClose}>
               Cancel
             </Button>
-            <Button
-              type="submit"
-              className="customCard px-4">
-              Add
-            </Button>
+
+            {isLoading ? (
+              <CustomSpinner />
+            ) : (
+              <Button
+                type="submit"
+                className="customCard px-4">
+                Add
+              </Button>
+            )}
           </div>
         </form>
       </Dialog>

@@ -7,105 +7,8 @@ export const globalApi = createApi({
     baseUrl: "http://localhost:12002/api/",
   }),
 
-  tagTypes: ["Banner", "Category", "Size", "Color","Subscriber","Contact"],
+  tagTypes: ["Banner", "Category", "Size", "Color", "Subscriber", "Contact"],
   endpoints: (builder) => ({
-    // getAllSearchTag: builder.query<SearchTag[], void>({
-    //   query() {
-    //     return {
-    //       url: `/search-tag`,
-    //       // credentials: "include",
-    //     };
-    //   },
-    //   transformResponse: (res: SearchTag[]) => res.sort((a: any, b: any) => b.id - a.id),
-    //   providesTags: ["SearchTag"],
-    // }),
-
-    // getSingleSearchTag: builder.query<SearchTag, number>({
-    //   query(id) {
-    //     return {
-    //       url: `/search-tag/${id}`,
-    //       // credentials: 'include',
-    //     };
-    //   },
-    //   providesTags: ["SearchTag"],
-    // }),
-
-    // createSearchTag: builder.mutation<SearchTag, FormData>({
-    //   query(newSearchTag) {
-    //     // console.log("success")
-    //     return {
-    //       url: "/search-tag",
-    //       method: "POST",
-    //       // credentials: 'include',
-    //       body: newSearchTag,
-    //     };
-    //   },
-    //   invalidatesTags: ["SearchTag"],
-    // }),
-
-    // updateSearchTag: builder.mutation<SearchTag, { id: number; updatedData: FormData }>({
-    //   query({ id, updatedData }) {
-    //     return {
-    //       url: `/search-tag/${id}`,
-    //       method: "PATCH",
-    //       // credentials: 'include',
-    //       body: updatedData,
-    //     };
-    //   },
-    //   invalidatesTags: ["SearchTag"],
-    // }),
-
-    // deleteSearchTag: builder.mutation<SearchTag, number>({
-    //   query(id) {
-    //     return {
-    //       url: `/search-tag/${id}`,
-    //       method: "Delete",
-    //       // credentials: 'include',
-    //     };
-    //   },
-    //   invalidatesTags: ["SearchTag"],
-    // }),
-
-
-
-
-    createSubscriber: builder.mutation<Subscriber, FormData>({
-      query(data) {
-        return {
-          url: "/subscriber",
-          method: "POST",
-          // credentials: 'include',
-          body: data,
-        };
-      },
-      invalidatesTags: ["Subscriber"],
-    }),
-
-
-    createContact: builder.mutation<Contact, FormData>({
-      query(data) {
-        return {
-          url: "/contact",
-          method: "POST",
-          // credentials: 'include',
-          body: data,
-        };
-      },
-      invalidatesTags: ["Contact"],
-    }),
-
-
-
-
-
-
-
-
-
-
-
-
-    //Banner============================================>
     getAllBanner: builder.query<Banner[], void>({
       query() {
         return {
@@ -113,7 +16,6 @@ export const globalApi = createApi({
           // credentials: "include",
         };
       },
-      transformResponse: (res: Banner[]) => res.sort((a: any, b: any) => b.id - a.id),
       providesTags: ["Banner"],
     }),
 
@@ -127,40 +29,28 @@ export const globalApi = createApi({
       providesTags: ["Banner"],
     }),
 
-    createBanner: builder.mutation<Banner, FormData>({
-      query(newBanner) {
-        // console.log("success")
+    createSubscriber: builder.mutation<Subscriber, FormData>({
+      query(data) {
         return {
-          url: "/banner",
+          url: "/subscriber",
           method: "POST",
           // credentials: 'include',
-          body: newBanner,
+          body: data,
         };
       },
-      invalidatesTags: ["Banner"],
+      invalidatesTags: ["Subscriber"],
     }),
 
-    updateBanner: builder.mutation<Banner, { id: number; updatedData: FormData }>({
-      query({ id, updatedData }) {
+    createContact: builder.mutation<Contact, FormData>({
+      query(data) {
         return {
-          url: `/banner/${id}`,
-          method: "PATCH",
+          url: "/contact",
+          method: "POST",
           // credentials: 'include',
-          body: updatedData,
+          body: data,
         };
       },
-      invalidatesTags: ["Banner"],
-    }),
-
-    deleteBanner: builder.mutation<Banner, number>({
-      query(id) {
-        return {
-          url: `/banner/${id}`,
-          method: "Delete",
-          // credentials: 'include',
-        };
-      },
-      invalidatesTags: ["Banner"],
+      invalidatesTags: ["Contact"],
     }),
 
     //Category=============================================>
@@ -357,10 +247,8 @@ export const {
   // useGetSingleSearchTagQuery,
   // useUpdateSearchTagMutation,
 
-  useCreateBannerMutation,
-  useDeleteBannerMutation,
   useGetAllBannerQuery,
-  useUpdateBannerMutation,
+  useGetSingleBannerQuery,
 
   useCreateCategoryMutation,
   useDeleteCategoryMutation,
@@ -382,12 +270,7 @@ export const {
   // useGetSingleGenreQuery,
   // useUpdateGenreMutation,
 
-
   useCreateSubscriberMutation,
-  
 
-  useCreateContactMutation
-
-
-  
+  useCreateContactMutation,
 } = globalApi;

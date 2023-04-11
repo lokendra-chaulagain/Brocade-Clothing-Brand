@@ -20,9 +20,8 @@ export interface SearchTag {
 }
 
 export interface Banner {
-  _id: string;
-  image: string;
-  createdAt: Date;
+  totalBannerCount: number;
+  allBanner: Array;
 }
 
 export interface Category {

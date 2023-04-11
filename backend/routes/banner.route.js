@@ -7,7 +7,7 @@ import validate from "../validation/validationMiddleware.js";
 import multer from "multer";
 
 // Configure Multer for file uploads
-const upload = multer({ dest: "uploads/" });
+const upload = multer({ dest: "brocade-uploads/banners/" });
 
 router.post("/", upload.array("images"), createBanner);
 router.put("/:id", uploadFile("thumbnail"), updateBanner);
