@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Grid, Dialog, Button } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { MiscellaneousContext } from "../../../context/MiscellaneousContext";
 import { useCreateBannerMutation } from "../../../redux/api/globalApi";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 export default function AddBannerDialog() {
   const [createBanner] = useCreateBannerMutation();
@@ -18,19 +19,31 @@ export default function AddBannerDialog() {
   } = useForm();
   let allFields = watch();
 
-  const handleCreateBanner = async () => {
+  const [images, setImages] = useState([]);
+
+  const handleImageUpload = async (e: any) => {
+    console.log(allFields);
+
     const formData = new FormData();
     formData.append("title", allFields.title);
     formData.append("description", allFields.description);
-    formData.append("thumbnail", allFields.thumbnail);
+    if (images) {
+      for (let i = 0; i < allFields.images.length; i++) {
+        formData.append("images", allFields.images[i]);
+      }
+    }
 
     try {
-      createBanner(formData);
-      handleClose();
-      reset();
-      toast.success("Create success");
+      const response = await axios.post("http://localhost:12002/api/banner", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
+      console.log(response.data);
+      setImages(response.data.urls);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
@@ -51,26 +64,10 @@ export default function AddBannerDialog() {
         open={open}
         onClose={handleClose}>
         <form
-          className="customCard p-3 overflow_hidden"
-          onSubmit={handleSubmit(handleCreateBanner)}>
+          onSubmit={handleSubmit(handleImageUpload)}
+          className="customCard p-3 overflow_hidden">
           <h4>Create New Banner </h4>
           <p className="customPrimaryTxtColor">To subscribe to this website, please enter your email address here. We will send updates occasionally.</p>
-
-          <div className="row">
-            <label
-              htmlFor="formFile"
-              className="form-label px-0 mt-2 h6 ">
-              Banner Image
-            </label>
-
-            <input
-              type="file"
-              className=" input_field_style form-control form-control-lg mb-0  border-0  rounded-0"
-              {...register("thumbnail", { required: "Title is required" })}
-              placeholder="Banner title"
-            />
-            {errors.thumbnail && <p className="form_hook_error">{`${errors.thumbnail.message}`}</p>}
-          </div>
 
           <div className="row">
             <label
@@ -98,6 +95,24 @@ export default function AddBannerDialog() {
               placeholder="Description"
             />
             {errors.description && <p className="form_hook_error">{`${errors.description.message}`}</p>}
+          </div>
+
+          <div className="row">
+            <label
+              htmlFor="formFile"
+              className="form-label px-0 mt-2 h6 ">
+              Banner Image
+            </label>
+
+            <input
+              type="file"
+              multiple
+              // onChange={handleImageUpload}
+              className=" input_field_style form-control form-control-lg mb-0  border-0  rounded-0"
+              {...register("images", { required: "Images are required" })}
+              placeholder="Images"
+            />
+            {errors.images && <p className="form_hook_error">{`${errors.images.message}`}</p>}
           </div>
 
           <div className="mt-3 d-flex justify-content-end  gap-2">

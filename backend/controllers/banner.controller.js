@@ -1,9 +1,28 @@
 import Banner from "../models/Banner.js";
 import createError from "../utils/error.js";
+import multer from "multer";
+import cloudinary from "cloudinary";
+
+// Configure Cloudinary with  credentials
+cloudinary.config({
+  cloud_name: "dyof6o0ul",
+  api_key: "943579715357941",
+  api_secret: "fFY3ZIIZAsSKF5lJw9CDVYHmpLQ",
+});
 
 const createBanner = async (req, res, next) => {
   try {
-    const newService = new Banner(req.body);
+    const images = [];
+    const files = req.files;
+
+    // Upload each file to Cloudinary and get the URL
+    for (const file of files) {
+      const result = await cloudinary.uploader.upload(file.path);
+      images.push(result.secure_url);
+    }
+
+    // save to database
+    const newService = new Banner({ title: req.body.title, description: req.body.description, images: images });
     const savedService = await newService.save();
     res.status(200).json(savedService);
   } catch (error) {

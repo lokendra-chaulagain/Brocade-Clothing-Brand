@@ -13,6 +13,7 @@ import sizeRoute from "./routes/size.route.js";
 import getAllRoute from "./routes/miscellaneous.route.js";
 
 import userRoute from "./routes/user.route.js";
+import testRoute from "./routes/test.route.js";
 
 import cors from "cors";
 import cookieParser from "cookie-parser";
@@ -50,6 +51,7 @@ app.use("/api/size", sizeRoute);
 app.use("/api/getAll", getAllRoute);
 
 app.use("/api/user", userRoute);
+app.use("/api/test", testRoute);
 
 //portListening
 app.listen(port, (error) => {

@@ -10,8 +10,8 @@ const bannerSchema = new mongoose.Schema(
       type: String,
     },
 
-    thumbnail: {
-      type: String,
+    images: {
+      type: [String],
     },
   },
   { timestamps: true }
