@@ -3,14 +3,16 @@ import TableHeading from "../TableHeading";
 import AddColorDialog from "./AddColorDialog";
 import { MdDelete } from "react-icons/md";
 import { useDeleteColorMutation, useGetAllColorQuery } from "../../../redux/api/globalApi";
+import { toast } from "react-toastify";
 
-export default function ColorTable({ setIsUpdated }: any) {
+export default function ColorTable() {
   const { data: colors } = useGetAllColorQuery();
   const [deleteColor] = useDeleteColorMutation();
 
   const handleDeleteColor = (id: any) => {
     try {
       deleteColor(id);
+      toast.success("Delete success");
     } catch (error) {
       console.log(error);
     }
@@ -20,7 +22,7 @@ export default function ColorTable({ setIsUpdated }: any) {
     <>
       <div className="d-flex align-items-center  ">
         <TableHeading heading={"All Colors"} />
-        <AddColorDialog setIsUpdated={setIsUpdated} />
+        <AddColorDialog />
       </div>
 
       <div className="customCard mt-2 mb-5 ">

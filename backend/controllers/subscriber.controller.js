@@ -13,7 +13,7 @@ const createSubscriber = async (req, res, next) => {
       service: "gmail",
       host: "smtp.ethereal.email",
       port: 587,
-      secure: false, //
+      secure: false,
       auth: {
         user: "lokendrachaulagain803@gmail.com",
         pass: "keodnnbwcunkxqmi",
@@ -46,7 +46,7 @@ const createSubscriber = async (req, res, next) => {
     });
     // Nodemailer email send end
   } catch (error) {
-    return next(createError(500, "Server Error while creating Subscriber !!!"));
+    return next(createError(500, "Something went wrong"));
   }
 };
 
@@ -55,7 +55,7 @@ const deleteSubscriber = async (req, res, next) => {
     const deletedSubscriber = await Subscriber.findByIdAndDelete(req.params.id);
     res.status(200).json(deletedSubscriber);
   } catch (error) {
-    return next(createError(500, "Server Error while deleting Subscriber !!!"));
+    return next(createError(500, "Something went wrong"));
   }
 };
 
@@ -82,7 +82,7 @@ const getAllSubscriber = async (req, res, next) => {
       allSubscriber,
     });
   } catch (error) {
-    return next(createError(500, "Server Error while getting all Subscriber !!!"));
+    return next(createError(500, "Something went wrong"));
   }
 };
 

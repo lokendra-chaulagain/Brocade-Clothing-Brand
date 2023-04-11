@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useCreateContactMutation } from "../redux/api/globalApi";
+import { toast } from "react-toastify";
 
 const ContactForm = () => {
   const [createContact] = useCreateContactMutation();
@@ -14,10 +15,11 @@ const ContactForm = () => {
   } = useForm();
   const handleAllField = watch();
 
-  const handleSend = async (handleAllField:any) => {
+  const handleSend = async (handleAllField: any) => {
     try {
       createContact(handleAllField);
-      reset()
+      toast.success("Message sent success");
+      reset();
     } catch (error) {
       console.log(error);
     }
@@ -43,10 +45,10 @@ const ContactForm = () => {
                 id="name"
                 {...register("name", { required: true })}
               />
-              {errors.name && <span>This field is required</span>}
+              {errors.name && <span className="m-0 p-0 text-danger">This field is required</span>}
             </div>
 
-            <div className="row mt-3 px-2 gap-3">
+            <div className="row mt-3 px-2 ">
               <input
                 className=" col col-12  form-control rounded-0"
                 type="text"
@@ -56,10 +58,10 @@ const ContactForm = () => {
                 autoCapitalize="off"
                 {...register("email", { required: true })}
               />
-              {errors.email && <span>This field is required</span>}
+              {errors.email && <span className="m-0 p-0 text-danger">This field is required</span>}
             </div>
 
-            <div className="row mt-3 px-2 gap-3">
+            <div className="row mt-3 px-2 ">
               <input
                 className=" col px-2 form-control rounded-0"
                 type="text"
@@ -68,17 +70,17 @@ const ContactForm = () => {
                 id="phone"
                 {...register("phone", { required: true })}
               />
-              {errors.phone && <span>This field is required</span>}
+              {errors.phone && <span className="m-0 p-0 text-danger">This field is required</span>}
             </div>
 
             <div className="row px-2 mt-3">
               <textarea
-                className="form-control rounded-0"
+                style={{ height: "20vh" }}
+                className="form-control rounded-0 "
                 id="message"
-                rows="10"
                 {...register("message", { required: true })}
               />
-              {errors.message && <span>This field is required</span>}
+              {errors.message && <span className="m-0 p-0 text-danger">This field is required</span>}
             </div>
 
             <div className="row  px-2 mt-3">

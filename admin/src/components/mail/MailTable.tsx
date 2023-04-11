@@ -3,8 +3,22 @@ import Link from "next/link";
 import { format } from "timeago.js";
 import { IoMdEye } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
+import { useDeleteContactMutation, useGetAllContactQuery } from "../../../redux/api/globalApi";
+import { toast } from "react-toastify";
 
-export default function MailTable({ mails, deleteMail,currentCount }: any) {
+export default function MailTable({ currentCount }: any) {
+  const { data: contacts } = useGetAllContactQuery();
+  const [deleteContact] = useDeleteContactMutation();
+
+  const handleDeleteContact = (id: any) => {
+    try {
+      deleteContact(id);
+      toast.success("Delete success");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <div className="customCard mt-2 mb-2">
@@ -20,15 +34,15 @@ export default function MailTable({ mails, deleteMail,currentCount }: any) {
             </tr>
           </thead>
           <tbody>
-            {mails &&
-              mails.map((mail: any, index: any) => (
+            {contacts &&
+              contacts.allContact.map((mail: any, index: any) => (
                 <tr
                   key={index}
                   className="customPrimaryTxtColor custom_table_hover ">
-                   <th scope="row">{currentCount - 5 + index + 1}</th>
-                  <td>{mail.name.substring(0,30)}</td>
-                  <td>{mail.email.substring(0,30)}</td>
-                  <td>{mail.message.substring(0,30)}</td>
+                  <th scope="row">{currentCount - 5 + index + 1}</th>
+                  <td>{mail.name.substring(0, 30)}</td>
+                  <td>{mail.email.substring(0, 30)}</td>
+                  <td>{mail.message.substring(0, 30)}</td>
                   <td>{format(mail.createdAt)}</td>
 
                   <td>
@@ -41,7 +55,7 @@ export default function MailTable({ mails, deleteMail,currentCount }: any) {
 
                       <MdDelete
                         className="delete_button_icon"
-                        onClick={(e) => deleteMail(mail._id)}
+                        onClick={() => handleDeleteContact(mail._id)}
                         aria-label="delete"
                       />
                     </div>

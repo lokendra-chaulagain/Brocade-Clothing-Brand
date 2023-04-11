@@ -2,10 +2,6 @@ import mongoose from "mongoose";
 
 const bannerSchema = new mongoose.Schema(
   {
-    image: {
-      type: String,
-    },
-
     title: {
       type: String,
     },
@@ -14,7 +10,7 @@ const bannerSchema = new mongoose.Schema(
       type: String,
     },
 
-    status: {
+    thumbnail: {
       type: String,
     },
   },

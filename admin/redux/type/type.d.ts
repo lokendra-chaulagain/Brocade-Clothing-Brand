@@ -5,6 +5,23 @@ export interface Color {
   updatedAt: Date;
 }
 
+export interface Subscriber {
+  _id: string;
+  email: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface Contact {
+  _id: string;
+  name: string;
+  email: string;
+  phone: number;
+  message: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
 export interface SearchTag {
   _id: string;
   name: string;
@@ -13,8 +30,11 @@ export interface SearchTag {
 
 export interface Banner {
   _id: string;
+  title: string;
+  description: string;
   image: string;
   createdAt: Date;
+  updatedAt: Date;
 }
 
 export interface Category {

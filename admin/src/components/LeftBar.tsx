@@ -29,8 +29,20 @@ const navItems = [
 
   {
     icon: <MdOutlineCategory />,
-    label: "Inventory",
+    label: "Category",
     route: "/category",
+  },
+
+  {
+    icon: <MdOutlineCategory />,
+    label: "Color",
+    route: "/color",
+  },
+
+  {
+    icon: <MdOutlineCategory />,
+    label: "Size",
+    route: "/size",
   },
 
   {

@@ -3,14 +3,16 @@ import TableHeading from "../TableHeading";
 import AddSizeDialog from "./AddSizeDialog";
 import { MdDelete } from "react-icons/md";
 import { useDeleteSizeMutation, useGetAllSizeQuery } from "../../../redux/api/globalApi";
+import { toast } from "react-toastify";
 
-export default function SizeTable({ setIsUpdated }: any) {
+export default function SizeTable() {
   const { data: sizes } = useGetAllSizeQuery();
   const [deleteSize] = useDeleteSizeMutation();
 
   const handleDeleteSize = (id: any) => {
     try {
       deleteSize(id);
+      toast.success("Delete success")
     } catch (error) {
       console.log(error);
     }
@@ -20,7 +22,7 @@ export default function SizeTable({ setIsUpdated }: any) {
     <>
       <div className="d-flex align-items-center  ">
         <TableHeading heading={"All Sizes"} />
-        <AddSizeDialog setIsUpdated={setIsUpdated} />
+        <AddSizeDialog />
       </div>
 
       <div className="customCard mt-2 mb-5 ">
@@ -28,7 +30,7 @@ export default function SizeTable({ setIsUpdated }: any) {
           <thead>
             <tr className="customPrimaryTxtColor">
               <th scope="col">S.N</th>
-              <th scope="col">Color Name</th>
+              <th scope="col">Size Name</th>
               <th scope="col">Actions</th>
             </tr>
           </thead>

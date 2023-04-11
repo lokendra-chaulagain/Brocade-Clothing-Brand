@@ -1,39 +1,24 @@
 import Banner from "../models/Banner.js";
 import createError from "../utils/error.js";
-import { uploadTocloudinary } from "../utils/uploadFile.js";
 
 const createBanner = async (req, res, next) => {
   try {
-    let data = {
-      ...req.body,
-    };
-    if (req.file) {
-      data.image = req.file.path;
-      uploadTocloudinary(req.file.path);
-    }
-    const newService = new Banner(data);
+    const newService = new Banner(req.body);
     const savedService = await newService.save();
     res.status(200).json(savedService);
   } catch (error) {
-    return next(createError(500, "Server Error while creating Banner !"));
+    return next(createError(500, "Something went wrong"));
   }
 };
 
 const updateBanner = async (req, res, next) => {
   try {
-    let data = {
-      ...req.body,
-    };
-    if (req.file) {
-      data.image = req.file.path;
-      uploadTocloudinary(req.file.path);
-    }
-    const updatedService = await Banner.findByIdAndUpdate(req.params.id, data, {
+    const updatedService = await Banner.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
     res.status(200).json(updatedService);
   } catch (error) {
-    return next(createError(500, "Server Error while updating Banner !"));
+    return next(createError(500, "Something went wrong"));
   }
 };
 
@@ -42,7 +27,7 @@ const deleteBanner = async (req, res, next) => {
     const deletedService = await Banner.findByIdAndDelete(req.params.id);
     res.status(200).json(deletedService);
   } catch (error) {
-    return next(createError(500, "Server Error while deleting Banner !"));
+    return next(createError(500, "Something went wrong"));
   }
 };
 
@@ -51,7 +36,7 @@ const getBannerById = async (req, res, next) => {
     const singleService = await Banner.findById(req.params.id);
     res.status(200).json(singleService);
   } catch (error) {
-    return next(createError(500, "Server Error while getting Banner by Id !"));
+    return next(createError(500, "Something went wrong"));
   }
 };
 
@@ -78,7 +63,7 @@ const getAllBanner = async (req, res, next) => {
       allBanner,
     });
   } catch (error) {
-    return next(createError(500, "Server Error while getting all Banner !"));
+    return next(createError(500, "Something went wrong"));
   }
 };
 

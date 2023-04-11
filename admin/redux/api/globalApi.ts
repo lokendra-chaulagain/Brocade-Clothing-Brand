@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { SearchTag, Banner, Category, Size, Color, Genre } from "../type/type";
+import { SearchTag, Banner, Category, Size, Color, Genre, Subscriber, Contact } from "../type/type";
 
 export const globalApi = createApi({
   reducerPath: "globalApi",
@@ -7,7 +7,7 @@ export const globalApi = createApi({
     baseUrl: "http://localhost:12002/api/",
   }),
 
-  tagTypes: ["Banner", "Category", "Size", "Color"],
+  tagTypes: ["Banner", "Category", "Size", "Color", "Subscriber", "Contact"],
   endpoints: (builder) => ({
     // getAllSearchTag: builder.query<SearchTag[], void>({
     //   query() {
@@ -74,7 +74,6 @@ export const globalApi = createApi({
           // credentials: "include",
         };
       },
-      transformResponse: (res: Banner[]) => res.sort((a: any, b: any) => b.id - a.id),
       providesTags: ["Banner"],
     }),
 
@@ -308,16 +307,52 @@ export const globalApi = createApi({
       },
       invalidatesTags: ["Genre"],
     }),
+
+    getAllSubscriber: builder.query<Subscriber[], void>({
+      query() {
+        return {
+          url: `/subscriber`,
+          // credentials: "include",
+        };
+      },
+      providesTags: ["Subscriber"],
+    }),
+
+    deleteSubscriber: builder.mutation<Subscriber, string>({
+      query(id) {
+        return {
+          url: `/subscriber/${id}`,
+          method: "Delete",
+          // credentials: 'include',
+        };
+      },
+      invalidatesTags: ["Subscriber"],
+    }),
+
+    getAllContact: builder.query<Contact[], void>({
+      query() {
+        return {
+          url: `/contact`,
+          // credentials: "include",
+        };
+      },
+      providesTags: ["Contact"],
+    }),
+
+    deleteContact: builder.mutation<Contact, string>({
+      query(id) {
+        return {
+          url: `/contact/${id}`,
+          method: "Delete",
+          // credentials: 'include',
+        };
+      },
+      invalidatesTags: ["Contact"],
+    }),
   }),
 });
 
 export const {
-  useGetAllSearchTagQuery,
-  useCreateSearchTagMutation,
-  useDeleteSearchTagMutation,
-  useGetSingleSearchTagQuery,
-  useUpdateSearchTagMutation,
-
   useCreateBannerMutation,
   useDeleteBannerMutation,
   useGetAllBannerQuery,
@@ -342,4 +377,10 @@ export const {
   useDeleteGenreMutation,
   useGetSingleGenreQuery,
   useUpdateGenreMutation,
+
+  useGetAllSubscriberQuery,
+  useDeleteSubscriberMutation,
+
+  useGetAllContactQuery,
+  useDeleteContactMutation,
 } = globalApi;

@@ -2,14 +2,27 @@ import React from "react";
 import TableHeading from "../TableHeading";
 import AddCategoryDialog from "./AddCategoryDialog";
 import { MdDelete } from "react-icons/md";
-import Image from "next/image";
+import { toast } from "react-toastify";
+import { useDeleteCategoryMutation, useGetAllCategoryQuery } from "../../../redux/api/globalApi";
 
-export default function CategoryTable({ deleteCategory, categories, setIsUpdated }: any) {
+export default function CategoryTable() {
+  const { data: categories } = useGetAllCategoryQuery();
+  const [deleteCategory] = useDeleteCategoryMutation();
+
+  const handleDeleteCategory = (id: any) => {
+    try {
+      deleteCategory(id);
+      toast.success("Delete success");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <div className="d-flex align-items-center  ">
         <TableHeading heading={"All Categories"} />
-        <AddCategoryDialog setIsUpdated={setIsUpdated} />
+        <AddCategoryDialog />
       </div>
 
       <div className="customCard mt-2 mb-5 ">
@@ -18,8 +31,6 @@ export default function CategoryTable({ deleteCategory, categories, setIsUpdated
             <tr className="customPrimaryTxtColor">
               <th scope="col">S.N</th>
               <th scope="col">Category Name</th>
-              <th scope="col">Category Banner</th>
-              <th scope="col">Description</th>
               <th scope="col">Actions</th>
             </tr>
           </thead>
@@ -34,29 +45,9 @@ export default function CategoryTable({ deleteCategory, categories, setIsUpdated
                   <td>{category.name}</td>
 
                   <td>
-                    <a
-                      className="d-flex "
-                      href={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL_SECURE}${category.image}`}>
-                      ​
-                      <div className="banner_table_image_div">
-                        <Image
-                          src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL_SECURE}${category.image}`}
-                          quality={50}
-                          layout="fill"
-                          objectFit="cover"
-                          className="rounded-1"
-                          alt="myimage"
-                        />
-                      </div>
-                    </a>
-                  </td>
-
-                  <td>{category.description.substring(0,30)}</td>
-
-                  <td>
                     <MdDelete
                       className="delete_button_icon"
-                      onClick={() => deleteCategory(category._id)}
+                      onClick={() => handleDeleteCategory(category._id)}
                       aria-label="delete"
                     />
                   </td>

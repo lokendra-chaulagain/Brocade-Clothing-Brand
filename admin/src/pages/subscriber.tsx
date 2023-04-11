@@ -4,12 +4,19 @@ import Header from "../components/Header";
 import SubscriberTable from "../components/subscriber/SubscriberTable";
 import Api from "../../service/Api.js";
 import TableHeading from "../components/TableHeading";
+import { useGetAllSubscriberQuery } from "../../redux/api/globalApi";
 let CallApi = new Api();
 
 function Subscriber() {
+  const { data } = useGetAllSubscriberQuery();
+  //  console.log(data)
+  // const subscribers = data && data.allSubscriber:any;
+
   const { deleteSuccess } = useContext(MiscellaneousContext);
   const [isUpdated, setIsUpdated] = useState(0);
-  const [subscribers, setSubscribers] = useState([]);
+
+  // const [subscribers, setSubscribers] = useState(data && data.allSubscriber);
+
   const [page, setPage] = useState(1);
   const [subscriberTotalCount, setSubscriberTotalCount] = useState(0);
   const [currentCount, setCurrentCount] = useState(5);
@@ -38,20 +45,20 @@ function Subscriber() {
     setCurrentCount(currentCount - 5);
   };
 
-  const fetchAllSubscriber = async () => {
-    try {
-      let res = await CallApi.fetchData(`subscriber?page=${page}&size=${5}&search=${searchInput}&sort=${sort}`);
-      res && setSubscribers(res.allSubscriber);
-      setSubscriberTotalCount(res.totalSubscriberCount);
-      setIsUpdated(0);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const fetchAllSubscriber = async () => {
+  //   try {
+  //     let res = await CallApi.fetchData(`subscriber?page=${page}&size=${5}&search=${searchInput}&sort=${sort}`);
+  //     res && setSubscribers(res.allSubscriber);
+  //     setSubscriberTotalCount(res.totalSubscriberCount);
+  //     setIsUpdated(0);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    fetchAllSubscriber();
-  }, [isUpdated, page, searchInput, sort]);
+  // useEffect(() => {
+  //   fetchAllSubscriber();
+  // }, [isUpdated, page, searchInput, sort]);
 
   return (
     <>
@@ -81,10 +88,10 @@ function Subscriber() {
           <option value="oldest">Oldest</option>
         </select>
       </div>
-
+      
       <SubscriberTable
         deleteSubscriber={deleteSubscriber}
-        subscribers={subscribers}
+        // subscribers={subscribers}
         subscriberTotalCount={subscriberTotalCount}
         currentCount={currentCount}
       />

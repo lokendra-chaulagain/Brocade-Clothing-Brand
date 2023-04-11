@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
-import { MiscellaneousContext } from "../../../context/MiscellaneousContext";
+import React, { useEffect, useState } from "react";
 import BannerTable from "../../components/banner/BannerTable";
 import Header from "../../components/Header";
 import Api from "../../../service/Api.js";
@@ -8,7 +7,6 @@ import TableHeading from "../../components/TableHeading";
 let CallApi = new Api();
 
 export default function Banner() {
-  const { deleteSuccess, somethingWentWrong } = useContext(MiscellaneousContext);
   const [isUpdated, setIsUpdated] = useState(0);
   const [banners, setBanners] = useState([]);
   const [page, setPage] = useState(1);
@@ -42,17 +40,7 @@ export default function Banner() {
     fetchAllBanner();
   }, [isUpdated, page, searchInput, sort]);
 
-  const deleteBanner = async (id: any) => {
-    try {
-      let res = await CallApi.deleteData(`banner/${id}`);
-      setIsUpdated(2);
-      deleteSuccess();
-      console.log("Delete success");
-    } catch (error) {
-      console.log(error);
-      somethingWentWrong();
-    }
-  };
+ 
 
   return (
     <>
@@ -82,13 +70,10 @@ export default function Banner() {
           <option value="oldest">Oldest</option>
         </select>
 
-        <AddBannerDialog setIsUpdated={setIsUpdated} />
+        <AddBannerDialog />
       </div>
 
       <BannerTable
-        setIsUpdated={setIsUpdated}
-        banners={banners}
-        deleteBanner={deleteBanner}
         bannerTotalCount={bannerTotalCount}
         currentCount={currentCount}
       />

@@ -57,7 +57,7 @@ export default function AddColorDialog({ setIsUpdated }: any) {
           onSubmit={handleSubmit(handleCreateColor)}
           className="customCard p-3 overflow_hidden">
           <h4>Create New Colors </h4>
-          <p className="customPrimaryTxtColor">To subscribe to this website, please enter your email address here. We will send updates occasionally.</p>
+          <p className="customPrimaryTxtColor">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, aspernatur. Modi dolores fugit iusto consectetur impedit veritatis, in error accusantium!</p>
 
           <div className="row ">
             <div className="col">

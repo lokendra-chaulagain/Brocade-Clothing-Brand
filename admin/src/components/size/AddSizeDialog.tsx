@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { MiscellaneousContext } from "../../../context/MiscellaneousContext";
 import { useCreateSizeMutation } from "../../../redux/api/globalApi";
 
-export default function AddSizeDialog({ setIsUpdated }: any) {
+export default function AddSizeDialog() {
   const [createSize] = useCreateSizeMutation();
   const { createSuccess, somethingWentWrong } = useContext(MiscellaneousContext);
 
@@ -57,7 +57,7 @@ export default function AddSizeDialog({ setIsUpdated }: any) {
           onSubmit={handleSubmit(handleCreateSize)}
           className="customCard p-3 overflow_hidden">
           <h4>Create New Sizes Option </h4>
-          <p className="customPrimaryTxtColor">To subscribe to this website, please enter your email address here. We will send updates occasionally.</p>
+          <p className="customPrimaryTxtColor">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem facilis in distinctio nisi, animi fugiat ullam tempora aperiam repudiandae dolorum!</p>
 
           <div className="row ">
             <div className="col">

@@ -1,10 +1,11 @@
 import multer from "multer";
 import { unlinkSync } from "fs";
 import { v2 as cloudinary } from "cloudinary";
+
 const uploadFile = (thumbnail) => {
   const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, `gem`);
+      cb(null, `brocade`);
     },
     filename: function (req, file, cb) {
       let name = file.originalname.split(".").pop();
@@ -21,7 +22,7 @@ const uploadFile = (thumbnail) => {
 const uploadMultipleFile = (thumbnail, image1, image2, image3, image4, image5) => {
   const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, `gem`);
+      cb(null, `brocade`);
     },
     filename: function (req, file, cb) {
       cb(null, new Date().toISOString().replace(/:/g, "-") + file.originalname);
@@ -41,10 +42,10 @@ const uploadMultipleFile = (thumbnail, image1, image2, image3, image4, image5) =
 
 const uploadTocloudinary = async (localpath) => {
   let config = {
-    cloud_name: "dxp4ne8fl",
-    api_key: "876484821923613",
-    api_secret: "kWbD22fQDxLn1uU9_DvTMwDqKr0",
-    folder: "gem",
+    cloud_name: "dyof6o0ul",
+    api_key: "943579715357941",
+    api_secret: "fFY3ZIIZAsSKF5lJw9CDVYHmpLQ",
+    folder: "brocade",
     use_filename: true,
     unique_filename: false,
   };
