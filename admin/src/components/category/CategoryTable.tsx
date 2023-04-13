@@ -4,6 +4,7 @@ import AddCategoryDialog from "./AddCategoryDialog";
 import { MdDelete } from "react-icons/md";
 import { toast } from "react-toastify";
 import { useDeleteCategoryMutation, useGetAllCategoryQuery } from "../../../redux/api/globalApi";
+import Image from "next/image";
 
 export default function CategoryTable() {
   const { data: categories } = useGetAllCategoryQuery();
@@ -31,6 +32,7 @@ export default function CategoryTable() {
             <tr className="customPrimaryTxtColor">
               <th scope="col">S.N</th>
               <th scope="col">Category Name</th>
+              <th scope="col">Image</th>
               <th scope="col">Actions</th>
             </tr>
           </thead>
@@ -43,6 +45,15 @@ export default function CategoryTable() {
                   <th scope="row">{index + 1}</th>
 
                   <td>{category.name}</td>
+                  <td>
+                    <Image
+                      src={category.image}
+                      alt="img"
+                      height={30}
+                      width={70}
+                      objectFit="cover"
+                    />
+                  </td>
 
                   <td>
                     <MdDelete

@@ -3,8 +3,11 @@ import Link from "next/link";
 import { MdDelete } from "react-icons/md";
 import { AiTwotoneEdit } from "react-icons/ai";
 import Image from "next/image";
+import parse from "html-react-parser";
 
-export default function AllProductsTable({ products, deleteProduct, productTotalCount,currentCount }: any) {
+export default function AllProductsTable({ products, deleteProduct, productTotalCount, currentCount }: any) {
+  console.log(products);
+
   return (
     <>
       <div className="customCard mt-2 mb-2">
@@ -92,7 +95,7 @@ export default function AllProductsTable({ products, deleteProduct, productTotal
                   </td>
 
                   <td>{product.category}</td>
-                  <td>{product.description.substring(0,20)}</td>
+                  <td>{parse(product.description.substring(0, 20))}</td>
                   {product.featured == 1 && <td className="active_status_green_color">Yes</td>}
                   {product.featured == 0 && <td className="active_status_red_color">No</td>}
                   {product.topSelling == 1 && <td className="active_status_green_color">Yes</td>}

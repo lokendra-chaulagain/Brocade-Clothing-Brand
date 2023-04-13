@@ -1,3 +1,4 @@
+import { Category } from './../../../src/redux/type/type.d';
 export interface Color {
   _id: string;
   color: string;
@@ -58,4 +59,17 @@ export interface Genre {
   image: string;
   createdAt: string;
   updatedAt: Date;
+}
+
+
+export interface Product {
+  _id: string;
+  name: string;
+  images: Array;
+  description: string;
+  price: number;
+  sku: number;
+  colors: Array;
+  sizes: Array;
+  CategoryId: string;
 }

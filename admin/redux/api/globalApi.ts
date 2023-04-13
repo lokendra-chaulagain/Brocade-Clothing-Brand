@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { SearchTag, Banner, Category, Size, Color, Genre, Subscriber, Contact } from "../type/type";
+import { SearchTag, Banner, Category, Size, Color, Genre, Subscriber, Contact ,Product} from "../type/type";
 
 export const globalApi = createApi({
   reducerPath: "globalApi",
@@ -7,7 +7,7 @@ export const globalApi = createApi({
     baseUrl: "http://localhost:12002/api/",
   }),
 
-  tagTypes: ["Banner", "Category", "Size", "Color", "Subscriber", "Contact"],
+  tagTypes: ["Banner", "Category", "Size", "Color", "Subscriber", "Contact","Product"],
   endpoints: (builder) => ({
     // getAllSearchTag: builder.query<SearchTag[], void>({
     //   query() {
@@ -349,6 +349,80 @@ export const globalApi = createApi({
       },
       invalidatesTags: ["Contact"],
     }),
+
+
+
+
+    getAllProduct: builder.query<Product[], void>({
+      query() {
+        return {
+          url: `/product`,
+          // credentials: "include",
+        };
+      },
+      transformResponse: (res: Product[]) => res.sort((a: any, b: any) => b.id - a.id),
+      providesTags: ["Product"],
+    }),
+
+    getSingleProduct: builder.query<Product, number>({
+      query(id) {
+        return {
+          url: `/product/${id}`,
+          // credentials: 'include',
+        };
+      },
+      providesTags: ["Product"],
+    }),
+
+    createProduct: builder.mutation<Product, FormData>({
+      query(newCategory) {
+        // console.log("success")
+        return {
+          url: "/product",
+          method: "POST",
+          // credentials: 'include',
+          body: newCategory,
+        };
+      },
+      invalidatesTags: ["Product"],
+    }),
+
+    updateProduct: builder.mutation<Product, { id: number; updatedData: FormData }>({
+      query({ id, updatedData }) {
+        return {
+          url: `/product/${id}`,
+          method: "PATCH",
+          // credentials: 'include',
+          body: updatedData,
+        };
+      },
+      invalidatesTags: ["Product"],
+    }),
+
+    deleteProduct: builder.mutation<Product, number>({
+      query(id) {
+        return {
+          url: `/product/${id}`,
+          method: "Delete",
+          // credentials: 'include',
+        };
+      },
+      invalidatesTags: ["Product"],
+    }),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   }),
 });
 
@@ -383,4 +457,11 @@ export const {
 
   useGetAllContactQuery,
   useDeleteContactMutation,
+
+
+  useCreateProductMutation,
+  useDeleteProductMutation,
+  useGetAllProductQuery,
+  useUpdateProductMutation,
+  useGetSingleProductQuery
 } = globalApi;
