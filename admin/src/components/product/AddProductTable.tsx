@@ -235,14 +235,25 @@ export default function AddProductTable() {
             {errors.categoryId && <p className="form_hook_error">{`${errors.categoryId.message}`}</p>}
           </div>
 
-          <div style={{ backgroundColor: "white", height: "45vh" }}>
+         
+
+
+          <div className="row ">
+            <label
+              htmlFor="description"
+              className="form-label mt-3 p_zero_first_cap h6 ">
+              Description
+            </label>
+            <div style={{ backgroundColor: "white", height: "45vh" }}>
             <ReactQuill
+              className="text-black px-0 text-opacity-75"
               style={{ height: "40vh" }}
               value={description}
               onChange={handleTextChange}
               theme="snow"
               placeholder="Write description"
             />
+          </div>
           </div>
 
           <div className="mt-3 d-flex justify-content-end  gap-2">

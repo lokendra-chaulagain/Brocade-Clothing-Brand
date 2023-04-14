@@ -20,9 +20,7 @@ export default function AllProductsTable({ products, deleteProduct, productTotal
               <th scope="col">Size</th>
               <th scope="col">Color</th>
               <th scope="col">Category</th>
-              <th scope="col">Description</th>
-              <th scope="col">Featured</th>
-              <th scope="col">Top Selling</th>
+              {/* <th scope="col">Description</th> */}
               <th scope="col">Actions</th>
             </tr>
           </thead>
@@ -35,21 +33,13 @@ export default function AllProductsTable({ products, deleteProduct, productTotal
                   <th scope="row">{currentCount - 8 + index + 1}</th>
                   <td>{product.name}</td>
                   <td>
-                    <a
-                      className="d-flex "
-                      href={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL_SECURE}${product.image}`}>
-                      ​
-                      <div className="banner_table_image_div">
-                        <Image
-                          src={`${process.env.NEXT_PUBLIC_CLOUDINARY_URL_SECURE}${product.image}`}
-                          quality={50}
-                          layout="fill"
-                          objectFit="cover"
-                          className="rounded-1"
-                          alt="myimage"
-                        />
-                      </div>
-                    </a>
+                  <Image
+                      src={product.images[0]}
+                      alt="img"
+                      height={35}
+                      width={35}
+                      objectFit="scale-down"
+                    />
                   </td>
                   <td className="small">
                     <div className="dropdown">
@@ -95,7 +85,7 @@ export default function AllProductsTable({ products, deleteProduct, productTotal
                   </td>
 
                   <td>{product.category}</td>
-                  <td>{parse(product.description.substring(0, 20))}</td>
+                  {/* <td>{parse(product.description.substring(0, 20))}</td> */}
                   {product.featured == 1 && <td className="active_status_green_color">Yes</td>}
                   {product.featured == 0 && <td className="active_status_red_color">No</td>}
                   {product.topSelling == 1 && <td className="active_status_green_color">Yes</td>}

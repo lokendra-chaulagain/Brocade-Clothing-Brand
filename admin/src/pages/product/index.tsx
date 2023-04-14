@@ -6,6 +6,7 @@ import { Button } from "@mui/material";
 import AllProductsTable from "../../components/product/AllProductsTable";
 import Api from "../../../service/Api.js";
 import TableHeading from "../../components/TableHeading";
+import { useGetAllProductQuery } from "../../../redux/api/globalApi";
 let CallApi = new Api();
 
 function Product() {
@@ -13,6 +14,8 @@ function Product() {
   const [isUpdated, setIsUpdated] = useState(0);
   const [searchInput, setSearchInput] = useState("");
   const [sort, setSort] = useState("latest");
+
+  const { data: products } = useGetAllProductQuery();
 
   const deleteProduct = async (id: any) => {
     try {
@@ -28,20 +31,20 @@ function Product() {
   const [page, setPage] = useState(1);
   const [productTotalCount, setProductTotalCount] = useState(0);
   const [currentCount, setCurrentCount] = useState(8);
-  const [products, setProducts] = useState([]);
-  const fetchAllProduct = async () => {
-    try {
-      let res = await CallApi.fetchData(`product/forAdmin?page=${page}&size=${8}&search=${searchInput}&sort=${sort}`);
-      setProducts(res.products);
-      setProductTotalCount(res.totalProductCount);
-      setIsUpdated(5);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const [products, setProducts] = useState([]);
+  // const fetchAllProduct = async () => {
+  //   try {
+  //     let res = await CallApi.fetchData(`product/forAdmin?page=${page}&size=${8}&search=${searchInput}&sort=${sort}`);
+  //     setProducts(res.products);
+  //     setProductTotalCount(res.totalProductCount);
+  //     setIsUpdated(5);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   useEffect(() => {
-    fetchAllProduct();
+    // fetchAllProduct();
   }, [isUpdated, page, searchInput, sort]);
 
   const handleNext = () => {

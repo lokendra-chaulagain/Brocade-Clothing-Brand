@@ -364,10 +364,12 @@ export const globalApi = createApi({
       providesTags: ["Product"],
     }),
 
-    getSingleProduct: builder.query<Product, number>({
+    getSingleProduct: builder.query<Product, string>({
       query(id) {
         return {
           url: `/product/${id}`,
+          method: "GET",
+
           // credentials: 'include',
         };
       },
@@ -387,7 +389,7 @@ export const globalApi = createApi({
       invalidatesTags: ["Product"],
     }),
 
-    updateProduct: builder.mutation<Product, { id: number; updatedData: FormData }>({
+    updateProduct: builder.mutation<Product, { id: string; updatedData: FormData }>({
       query({ id, updatedData }) {
         return {
           url: `/product/${id}`,

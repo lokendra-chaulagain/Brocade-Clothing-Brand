@@ -49,9 +49,9 @@ export default function CategoryTable() {
                     <Image
                       src={category.image}
                       alt="img"
-                      height={30}
-                      width={70}
-                      objectFit="cover"
+                      height={40}
+                      width={40}
+                      objectFit="scale-down"
                     />
                   </td>
 
