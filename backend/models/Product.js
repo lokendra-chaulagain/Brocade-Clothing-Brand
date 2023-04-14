@@ -5,41 +5,56 @@ const productSchema = new mongoose.Schema(
     name: {
       type: String,
     },
-    
-    image: {
+
+    slug: {
       type: String,
     },
 
-    color: {
+    images: {
       type: [String],
-    },
-
-    size: {
-      type: [String],
-    },
-
-    category: {
-      ref: "category",
-      type: mongoose.Schema.Types.ObjectId,
     },
 
     description: {
       type: String,
     },
 
-    featured: {
-      type: String,
+    price: {
+      type: Number,
     },
 
-    topSelling: {
-      type: String,
+    sizes: {
+      type: [String],
     },
 
-    url: {
-      type: String,
+    colors: {
+      type: [String],
     },
 
-    
+    material: {
+      type: [String],
+    },
+
+    sku: {
+      type: Number,
+    },
+
+    reviews: [
+      {
+        userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+        text: { type: String },
+        rating: { type: Number },
+        timestamp: { type: Date, default: Date.now },
+      },
+    ],
+
+    orders: [{ type: mongoose.Schema.Types.ObjectId, ref: "Order" }],
+
+    discounts: [{ type: mongoose.Schema.Types.ObjectId, ref: "Discount" }],
+
+    categoryId: {
+      ref: "category",
+      type: mongoose.Schema.Types.ObjectId,
+    },
   },
   { timestamps: true }
 );

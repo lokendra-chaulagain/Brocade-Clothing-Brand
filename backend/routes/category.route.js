@@ -4,8 +4,13 @@ import { createCategory, deleteCategory, getAllCategory, getCategoryById, update
 import { uploadFile } from "../utils/uploadFile.js";
 import category from "../validation/category.validation.js";
 import validate from "../validation/validationMiddleware.js";
+import multer from "multer";
 
-router.post("/", validate(category), createCategory);
+
+// Configure Multer for file uploads
+const upload = multer({ dest: "brocade-uploads/category/" });
+
+router.post("/", upload.single("image"),  createCategory);
 router.put("/:id", uploadFile("thumbnail"), updateCategory);
 router.get("/:id", getCategoryById);
 router.get("/", getAllCategory);

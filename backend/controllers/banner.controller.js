@@ -1,6 +1,5 @@
 import Banner from "../models/Banner.js";
 import createError from "../utils/error.js";
-import multer from "multer";
 import { v2 as cloudinary } from "cloudinary";
 
 // Configure Cloudinary with  credentials

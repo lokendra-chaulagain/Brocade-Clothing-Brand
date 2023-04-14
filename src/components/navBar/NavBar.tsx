@@ -58,6 +58,15 @@ const NavBar = () => {
             <p className="h6 color_white cursor-pointer d-none d-sm-block">Booking</p>
           </Link>
 
+
+          
+          <Link
+            passHref
+            legacyBehavior
+            href={"/collection"}>
+            <p className="h6 color_white cursor-pointer d-none d-sm-block">Collection</p>
+          </Link>
+
           <Link
             passHref
             legacyBehavior

@@ -46,3 +46,17 @@ export interface Genre {
   createdAt: string;
   updatedAt: Date;
 }
+
+
+
+export interface Product {
+  _id: string;
+  name: string;
+  images: Array;
+  description: string;
+  price: number;
+  sku: number;
+  colors: Array;
+  sizes: Array;
+  CategoryId: string;
+}

@@ -2,25 +2,64 @@ import Product from "../models/Product.js";
 import createError from "../utils/error.js";
 import slugify from "slugify";
 import Category from "../models/Category.js";
-import { uploadTocloudinary } from "../utils/uploadFile.js";
+import { v2 as cloudinary } from "cloudinary";
+
+// const createProduct = async (req, res, next) => {
+//   try {
+//     let data = {
+//       ...req.body,
+//       url: slugify(req.body.name, "-"),
+//     };
+//     console.log(req.body);
+//     if (req.file) {
+//       data.image = req.file.path;
+//       uploadTocloudinary(req.file.path);
+//     }
+
+//     const newService = new Product(data);
+//     const savedService = await newService.save();
+//     res.status(200).json(savedService);
+//   } catch (error) {
+//     return next(createError(500, "Server Error while creating Product !"));
+//   }
+// };
+
+// Configure Cloudinary with  credentials
+cloudinary.config({
+  cloud_name: "dyof6o0ul",
+  api_key: "943579715357941",
+  api_secret: "fFY3ZIIZAsSKF5lJw9CDVYHmpLQ",
+});
 
 const createProduct = async (req, res, next) => {
   try {
-    let data = {
-      ...req.body,
-      url: slugify(req.body.name, "-"),
-    };
-    console.log(req.body);
-    if (req.file) {
-      data.image = req.file.path;
-      uploadTocloudinary(req.file.path);
+    const images = [];
+    const files = req.files;
+
+    // Upload each file to Cloudinary and get the URL
+    for (const file of files) {
+      // const result = await cloudinary.uploader.upload(file.path, { folder: "brocade-uploads/banners" });
+
+      const currentDateTime = new Date().toISOString().replace(/[-:.]/g, ""); // Get current date and time
+      const originalnameWithoutExtension = file.originalname.split(".").slice(0, -1).join("."); // Remove file extension
+      const publicId = `brocade-uploads/products/${currentDateTime}_${originalnameWithoutExtension}`; // Create unique public_id without duplicate file extension
+      const result = await cloudinary.uploader.upload(file.path, { public_id: publicId });
+      // images.push(result.secure_url);
+      images.push(result.secure_url);
     }
 
-    const newService = new Product(data);
+    const slug = slugify(req.body.name, {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+    });
+
+    // save to database
+    const newService = new Product({ name: req.body.name, description: req.body.description, categoryId: req.body.categoryId, slug: slug, price: req.body.price, images: images });
     const savedService = await newService.save();
     res.status(200).json(savedService);
   } catch (error) {
-    return next(createError(500, "Server Error while creating Product !"));
+    return next(createError(500, "Something went wrong"));
   }
 };
 
@@ -147,7 +186,7 @@ const getAllProductFrontend = async (req, res, next) => {
 
     const totalProductCount = await Product.countDocuments();
     // const allProduct = await Product.find(query)
-    const allProduct = await Product.find({ category: category }) 
+    const allProduct = await Product.find({ category: category })
       .skip(skip)
       .limit(size)
       .sort({ createdAt: sort == "latest" ? -1 : 1 });

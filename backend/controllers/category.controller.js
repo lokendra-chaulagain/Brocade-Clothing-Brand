@@ -1,9 +1,32 @@
 import Category from "../models/Category.js";
 import createError from "../utils/error.js";
+import slugify from "slugify";
+
+import { v2 as cloudinary } from "cloudinary";
+
+// Configure Cloudinary with  credentials
+cloudinary.config({
+  cloud_name: "dyof6o0ul",
+  api_key: "943579715357941",
+  api_secret: "fFY3ZIIZAsSKF5lJw9CDVYHmpLQ",
+});
 
 const createCategory = async (req, res, next) => {
   try {
-    const newService = new Category(req.body);
+    const file = req.file;
+    const currentDateTime = new Date().toISOString().replace(/[-:.]/g, ""); // Get current date and time
+    const originalnameWithoutExtension = file.originalname.split(".").slice(0, -1).join("."); // Remove file extension
+    const publicId = `brocade-uploads/category/${currentDateTime}_${originalnameWithoutExtension}`; // Create unique public_id without duplicate file extension
+    const result = await cloudinary.uploader.upload(file.path, { public_id: publicId });
+    const imageUrl = result.secure_url; // Get secure_url from result object
+
+    const slug = slugify(req.body.name, {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+    });
+
+    const newService = new Category({ name: req.body.name, slug: slug, image: imageUrl });
     const savedService = await newService.save();
     res.status(200).json(savedService);
   } catch (error) {
